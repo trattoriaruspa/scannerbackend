@@ -1,0 +1,89 @@
+import { createClientFromRequest } from 'npm:@base44/sdk@0.7.1';
+import Stripe from 'npm:stripe@^14';
+
+const stripe = new Stripe(Deno.env.get("STRIPE_API_KEY"));
+const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET");
+
+Deno.serve(async (req) => {
+    const signature = req.headers.get('stripe-signature');
+    const body = await req.text();
+
+    let event;
+    try {
+        event = await stripe.webhooks.constructEventAsync(body, signature, webhookSecret);
+    } catch (err) {
+        console.error(`Webhook signature verification failed: ${err.message}`);
+        return new Response(err.message, { status: 400 });
+    }
+    
+    const base44 = createClientFromRequest(req, { asServiceRole: true });
+    
+    try {
+        switch (event.type) {
+            case 'checkout.session.completed': {
+                const session = event.data.object;
+                const userId = session.client_reference_id;
+                const stripeCustomerId = session.customer;
+                const subscriptionId = session.subscription;
+
+                if (!userId) {
+                    console.error('Webhook Error: checkout.session.completed did not have a client_reference_id.');
+                    break;
+                }
+
+                const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+                
+                await base44.asServiceRole.entities.User.update(userId, {
+                    stripe_customer_id: stripeCustomerId,
+                    subscription_id: subscriptionId,
+                    subscription_status: subscription.status, // 'trialing' or 'active'
+                    trial_end_date: subscription.trial_end ? new Date(subscription.trial_end * 1000).toISOString() : null,
+                });
+                console.log(`Successfully updated user ${userId} to ${subscription.status}`);
+                break;
+            }
+
+            case 'invoice.payment_succeeded': {
+                const invoice = event.data.object;
+                if (invoice.billing_reason === 'subscription_cycle') {
+                    const stripeCustomerId = invoice.customer;
+                    const subscriptionId = invoice.subscription;
+                    
+                    const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+                    const users = await base44.asServiceRole.entities.User.filter({ stripe_customer_id: stripeCustomerId });
+
+                    if (users && users.length > 0) {
+                        const userToUpdate = users[0];
+                        await base44.asServiceRole.entities.User.update(userToUpdate.id, {
+                            subscription_status: subscription.status, // should be 'active'
+                        });
+                        console.log(`Successfully renewed subscription for user ${userToUpdate.id}`);
+                    }
+                }
+                break;
+            }
+
+            case 'customer.subscription.updated':
+            case 'customer.subscription.deleted': {
+                const subscription = event.data.object;
+                const stripeCustomerId = subscription.customer;
+                
+                const users = await base44.asServiceRole.entities.User.filter({ stripe_customer_id: stripeCustomerId });
+
+                if (users && users.length > 0) {
+                    const userToUpdate = users[0];
+                    await base44.asServiceRole.entities.User.update(userToUpdate.id, {
+                        subscription_status: subscription.status, // 'canceled', 'past_due', etc.
+                    });
+                     console.log(`Subscription updated for user ${userToUpdate.id} to ${subscription.status}`);
+                }
+                break;
+            }
+        }
+    } catch (error) {
+        console.error(`Error handling webhook ${event.type}:`, error);
+        return new Response(JSON.stringify({ error: `Webhook handler failed: ${error.message}` }), { status: 500 });
+    }
+
+    return new Response(JSON.stringify({ received: true }), { status: 200 });
+});
