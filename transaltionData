@@ -1,0 +1,2139 @@
+
+export const translations = {
+  it: {
+    // Menu
+    projects: "Progetti",
+    reports: "Report",
+    settings: "Impostazioni",
+    trash: "Cestino",
+    menu: "Menu",
+    
+    // Home
+    manageScans: "Gestisci le tue scansioni di sicurezza",
+    newProject: "Nuovo Progetto",
+    noProjects: "Nessun progetto",
+    createFirstProject: "Crea il tuo primo progetto per iniziare a gestire le scansioni di sicurezza",
+    createProject: "Crea Progetto",
+    resolved: "risolte",
+    confirmDelete: "Sei sicuro di voler eliminare questo progetto?",
+    projectName: "Nome progetto",
+    projectNamePlaceholder: "Es: Applicazione Web Principale",
+    description: "Descrizione",
+    descriptionPlaceholder: "Descrivi brevemente il progetto...",
+    optional: "opzionale",
+    scanFiles: "File di scansione",
+    uploadFiles: "Carica file",
+    uploadFilesDescription: "XML, JSON, CSV, TXT, HTML",
+    creating: "Creazione...",
+    create: "Crea",
+    
+    // Project Dashboard
+    vulnerabilities: "Vulnerabilità",
+    vulnerabilityResolution: "Risoluzione Vulnerabilità",
+    networkMap: "Network Map",
+    uploadScans: "Carica Scansioni",
+    generateReport: "Genera Report",
+    foundVulnerabilities: "Vulnerabilità Trovate",
+    resolvedVulnerabilities: "Vulnerabilità Risolte",
+    scannedDevices: "Dispositivi Scansionati",
+    securityLevel: "Livello Sicurezza",
+    loadingProject: "Caricamento progetto...",
+    backToProjects: "Torna ai Progetti",
+    
+    // Vulnerabilities
+    filters: "Filtri",
+    all: "Tutte",
+    critical: "Critico",
+    high: "Alto",
+    medium: "Medio",
+    low: "Basso",
+    info: "Info",
+    open: "Aperto",
+    inProgress: "In corso",
+    resolved: "Risolto",
+    falsePositive: "Falso positivo",
+    severity: "Gravità",
+    status: "Stato",
+    ipAddress: "Indirizzo IP",
+    allIPs: "Tutti gli IP",
+    device: "Dispositivo",
+    allDevices: "Tutti",
+    noVulnerabilities: "Nessuna vulnerabilità",
+    noVulnerabilitiesDesc: "Carica scansioni per iniziare",
+    changeFilters: "Modifica i filtri per vedere altre vulnerabilità",
+    simpleExplanation: "Spiegazione Semplice",
+    technicalDetails: "Dettagli Tecnici",
+    affectedAsset: "Asset Interessato",
+    recommendedSolution: "Soluzione Raccomandata",
+    usefulResources: "Risorse Utili",
+    assignedTo: "Assegnato a",
+    unassigned: "Non assegnato",
+    assign: "Assegna",
+    changeStatus: "Cambia Stato",
+    
+    // Upload Scans
+    addScans: "Aggiungi Scansioni",
+    addScansDescription: "Carica nuove scansioni per aggiornare il progetto",
+    uploadInProgress: "Caricamento...",
+    upload: "Carica",
+    
+    // Report Page
+    securityReport: "Report di Sicurezza",
+    professionalSecurityReport: "Report di Sicurezza Professionale",
+    vulnerabilityAssessmentReport: "Report di Valutazione Vulnerabilità",
+    reportDate: "Data",
+    reportedBy: "Redatto da",
+    auditorNamePlaceholder: "Nome dell'auditor",
+    edit: "Modifica",
+    endEdit: "Fine Modifica",
+    share: "Condividi",
+    download: "Scarica",
+    downloadPDF: "Scarica PDF",
+    downloadReport: "Scarica Report",
+    selectFormat: "Seleziona il formato del file per il download.",
+    pdfPrint: "PDF (Stampa)",
+    wordDoc: "Word (.doc)",
+    textFile: "Testo (.txt)",
+    completeByAuditor: "Da completare a cura dell'auditor.",
+    addFiles: "Aggiungi file",
+    manageSections: "Gestisci Sezioni",
+    addSection: "Aggiungi Sezione",
+    showHiddenSection: "Mostra sezione",
+    customSectionTitle: "Titolo Sezione Personalizzata",
+    customSectionContent: "Contenuto della sezione personalizzata...",
+    downloading: "Download in corso...",
+    autoSaving: "Salvataggio automatico...",
+    loadingReport: "Caricamento report...",
+    projectNotFound: "Progetto non trovato",
+    reportNotFound: "Report non trovato",
+    cannotLoadReport: "Impossibile caricare i dati del report o del progetto associato.",
+
+    // Report sections
+    executiveSummary: "Sommario Esecutivo",
+    executiveSummaryUpper: "SOMMARIO ESECUTIVO",
+    vulnerabilityOverview: "Panoramica Vulnerabilità",
+    vulnerabilityOverviewUpper: "PANORAMICA VULNERABILITÀ",
+    methodology: "Metodologia di Valutazione",
+    methodologyAssessment: "Metodologia di Valutazione",
+    methodologyUpper: "METODOLOGIA DI VALUTAZIONE",
+    vulnerabilityDetails: "Dettaglio Vulnerabilità",
+    vulnerabilityDetailsUpper: "DETTAGLIO VULNERABILITÀ",
+    criticalVulnerabilities: "Vulnerabilità Critiche",
+    scannedAssets: "Asset Scansionati",
+    scannedAssetsUpper: "ASSET SCANSIONATI",
+    recommendations: "Raccomandazioni e Piano d'Azione",
+    recommendationsAndActionPlan: "Raccomandazioni e Piano d'Azione",
+    recommendationsUpper: "RACCOMANDAZIONI E PIANO D'AZIONE",
+    conclusions: "Conclusioni",
+    conclusionsUpper: "CONCLUSIONI",
+    remediationActionsUndertaken: "Piano risoluzione vulnerabilità intrapreso",
+    remediationActionsUndertakenUpper: "PIANO RISOLUZIONE VULNERABILITÀ INTRAPRESO",
+
+    // New Report Structure
+    clientName: "Nome Cliente",
+    testPeriod: "Periodo Test",
+    reportVersion: "Versione Report",
+    contacts: "Contatti",
+    authorizationScope: "Autorizzazioni e Scope",
+    testTypeMethodology: "Tipo Test e Metodologia",
+    findingsSummary: "Riepilogo dei Findings",
+    vulnerabilityId: "ID",
+    remediationPlan: "Piano di Remediation",
+    remediationPlan30d: "Piano a 30 giorni",
+    remediationPlan60d: "Piano a 60 giorni",
+    remediationPlan90d: "Piano a 90 giorni",
+    immediateActions: "Azioni Immediate Prioritarie",
+    retestRequest: "Richiesta di Retest",
+    evidenceSummary: "Sintesi Allegati",
+    recommendedAction: "Azione Raccomandata",
+    shareReportDescription: "Condividi questo report tramite email o link.",
+    sendByEmail: "Invia tramite Email",
+    copyLink: "Copia Link",
+    
+    // Stats & Metrics
+    totalVulnerabilities: "Vulnerabilità Totali",
+    total: "Totale",
+    criticalSeverity: "Critiche",
+    highSeverity: "Alte",
+    mediumSeverity: "Medie",
+    lowSeverity: "Basse",
+    
+    // Vulnerability details
+    affectedAssets: "Asset Interessati",
+    affectedAssetLabel: "Asset Interessato:",
+    impact: "Impatto",
+    impactLabel: "Impatto:",
+    impactText: "Questa vulnerabilità di gravità {{severity}} interessa {{assetCount}} {{assetWord}}. {{requiresImmediateAttention}}",
+    requiresImmediateAttention: "Richiede attenzione immediata",
+    recommendedResolveSoon: "Si raccomanda di risolvere al più presto",
+    remedy: "Rimedio",
+    recommendedRemedy: "Rimedio Raccomandato",
+    remediationLabel: "Rimedio Raccomandato:",
+    recommendedRemedyLabel: "Rimedio Raccomandato:",
+    consultSecurityTeam: "Consultare il team di sicurezza",
+    cvss: "CVSS",
+    cve: "CVE",
+    title: "Titolo",
+    evidence: "Evidenza",
+    image: "Immagine",
+    translate: "Traduci",
+    generate: "Genera",
+    translatedText: "Testo tradotto",
+    label_image: "Immagine",
+    label_translated_text: "Testo tradotto",
+    
+    // Table headers
+    hostname: "Hostname",
+    ipAddressLabel: "Indirizzo IP",
+    type: "Tipo",
+    vulnerabilitiesCount: "Vulnerabilità",
+    risk: "Rischio",
+    riskLevel: "Livello di Rischio",
+    scannedDevicesTable: "Dispositivi Scansionati",
+    
+    // Risk levels
+    safe: "SICURO",
+    
+    // Assets & Devices
+    analyzedDevices: "Dispositivi analizzati",
+    devices: "dispositivi",
+    
+    // Footer
+    confidentialDocument: "Documento Confidenziale",
+    confidentialDescription: "Questo report contiene informazioni sensibili sulla sicurezza",
+    securityPlatform: "SecureGuard Security Platform",
+    
+    // Download formats
+    fileFormat: "Formato File",
+    
+    // Share
+    shareReport: "Condividi Report",
+    shareMethod: "Metodo di condivisione",
+    sendEmailOnlyAppUsers: "Invia via Email (solo utenti app)",
+    copyToClipboard: "Copia negli Appunti",
+    recipientUser: "Utente destinatario",
+    selectUserPlaceholder: "Seleziona un utente",
+    emailOnlyRegisteredUsersInfo: "L'email può essere inviata solo a utenti registrati nell'app",
+    clipboardCopyInfo: "Il contenuto del report verrà copiato negli appunti",
+    sendReport: "Invia Report",
+    copyReport: "Copia Report",
+    sendingInProgress: "Invio in corso...",
+    selectUser: "Seleziona un utente",
+    reportSentSuccessfully: "Report inviato con successo",
+    errorSendingReportEmail: "Errore nell'invio dell'email del report",
+    reportCopiedToClipboard: "Report copiato negli appunti",
+    errorCopyingReport: "Errore nella copia del report",
+    securityReportSubject: "Report di Sicurezza - {{companyName}}",
+    emailShareBody: `Gentile destinatario,
+
+Le inviamo il report di sicurezza per {{companyName}}.
+
+SOMMARIO ESECUTIVO:
+{{executiveSummary}}
+
+STATISTICHE VULNERABILITÀ:
+- Totali: {{totalVulnerabilities}}
+- Critiche: {{criticalVulnerabilities}}
+- Alte: {{highVulnerabilities}}
+- Medie: {{mediumVulnerabilities}}
+- Basse: {{lowVulnerabilities}}
+
+VULNERABILITÀ IDENTIFICATE (estratto):
+{{detailedVulnerabilitiesExtract}}
+{{moreVulnerabilities}}
+
+AZIONI DI REMEDIATION:
+{{remediationActions}}
+
+RIEPILOGO ASSET:
+{{assetsSummary}}
+
+RECOMANDAZIONI:
+{{recommendations}}
+
+Per consultare il report completo: {{fullReportLink}}
+
+---
+Redatto da: {{auditorName}}
+Data: {{date}}
+
+SecureGuard Security Platform
+`,
+    andMoreVulnerabilities: "...e altre vulnerabilità (vedi report completo)",
+    noVulnerabilitiesIdentified: "Nessuna vulnerabilità identificata",
+    noDetailedVulnerabilitiesIdentified: "Nessuna vulnerabilità dettagliata identificata",
+    
+    // AI Assist
+    aiAssistRemediation: "Assistenza IA per Remediation",
+    aiAssistRemediationDescription: "Chiedi all'IA di suggerirti azioni di remediation basate sulle vulnerabilità trovate",
+    aiAssistRemediationExample: "Es: Suggerisci priorità d'azione per le vulnerabilità critiche",
+    aiAssistPrompt: `Sei un esperto di cybersecurity. Analizza le seguenti vulnerabilità:
+- Totali: {{totalVulnerabilities}}
+- Critiche: {{criticalVulnerabilities}}
+- Alte: {{highVulnerabilities}}
+
+Suggerisci azioni concrete e prioritizzate per la risoluzione. Richiesta specifica dell'utente: {{aiPrompt}}`,
+    remediationActionsPlaceholder: "Documenta qui le azioni intraprese per risolvere le vulnerabilità...",
+    errorGeneratingContent: "Errore nella generazione del contenuto",
+    editProject: "Modifica Progetto",
+    editProjectDescription: "Modifica il nome del tuo progetto.",
+    saving: "Salvataggio...",
+    
+    // Errors
+    errorDownloadingReport: "Errore nel download del report",
+    
+    // Report language and sections
+    reportLanguage: "Lingua report",
+    sections: "Sezioni",
+    
+    // Date formatting
+    date: "Data",
+    report_name_format: "Report {{projectName}} - {{date}}",
+    report_name_format_no_project: "Report - {{date}}",
+    
+    // Reports List
+    savedReports: "Report Salvati",
+    allProjectReports: "Tutti i report generati dai tuoi progetti",
+    noReports: "Nessun report",
+    noReportsDesc: "Crea report dai tuoi progetti per visualizzarli qui",
+    creationDate: "Data creazione",
+    deleteReport: "Eliminare questo report?",
+    
+    // Settings
+    "settings.title": "Impostazioni",
+    "settings.description": "Personalizza l'aspetto e il comportamento dell'applicazione",
+    "settings.theme.title": "Tema Interfaccia",
+    "settings.theme.description": "Scegli come vuoi visualizzare l'applicazione",
+    "settings.theme.modeLabel": "Modalità visualizzazione",
+    "settings.theme.lightMode": "Chiara (Giornaliera)",
+    "settings.theme.darkMode": "Scura",
+    "settings.language.title": "Lingua",
+    "settings.language.description": "Seleziona la lingua dell'applicazione",
+    "settings.language.label": "Lingua dell'applicazione",
+    "settings.language.italian": "Italiano",
+    "settings.language.english": "Inglese",
+    "settings.language.spanish": "Spagnolo",
+    "settings.language.french": "Francese",
+    "settings.language.german": "Tedesco",
+    "settings.language.note": "Tutte le pagine dell'app verranno tradotte",
+    
+    // Trash
+    deletedProjects: "Progetti Eliminati",
+    deleteAfter30Days: "I progetti verranno eliminati definitivamente dopo 30 giorni",
+    restoreProject: "Ripristina Progetto",
+    deletePermanently: "Elimina Definitivamente",
+    daysRemaining: "giorni rimanenti",
+    emptyTrash: "Cestino vuoto",
+    noDeletedProjects: "Non ci sono progetti eliminati",
+    deletedOn: "Eliminato il",
+    restoreConfirm: "Ripristinare",
+    deletePermanentlyConfirm: "Eliminare definitivamente",
+    cannotBeUndone: "Sei sicuro di voler eliminare definitivamente \"{{name}}\"? Questa azione non può essere annullata.",
+    
+    // Wizard AI
+    resolutionProgress: "Progresso Risoluzione",
+    completed: "Completato!",
+    noOpenVulnerabilities: "Non ci sono vulnerabilità aperte da risolvere",
+    vulnerability: "Vulnerabilità",
+    aiAssistant: "Assistente IA",
+    deleteChat: "Cancella Chat",
+    deleteAllConversation: "Eliminare tutta la conversazione con l'IA?",
+    askAIHelp: "Chiedi all'IA come risolvere questa vulnerabilità",
+    writeMessage: "Scrivi un messaggio...",
+    markAsResolved: "Segna come Risolto",
+    priorityLevel: "Priorità",
+    estimatedEffort: "Sforzo Stimato",
+    aiIsTyping: "L'AI sta scrivendo...",
+    confirmDeleteFile: "Sei sicuro di voler eliminare \"{{fileName}}\"? Tutti i dati associati verranno rimossi in modo permanente.",
+    scansUploadedTitle: "File già caricati ({count})",
+
+    // Network Map
+    networkTopology: "Topologia di Rete",
+    networkStats: "Statistiche Rete",
+    totalDevices: "Dispositivi Totali",
+    activeDevices: "Dispositivi Attivi",
+    criticalRisk: "Rischio Critico",
+    highRisk: "Rischio Alto",
+    deviceDetails: "Dettagli Dispositivo",
+    operatingSystem: "Sistema Operativo",
+    openPorts: "Porte Aperte",
+    services: "Servizi",
+    lastSeen: "Ultima Volta Visto",
+    connectedDevices: "Dispositivi Connessi",
+    associatedVulnerabilities: "Vulnerabilità Associate",
+    noDevices: "Nessun dispositivo",
+    noDevicesDesc: "Carica scansioni per visualizzare la mappa di rete",
+    zoomIn: "Zoom In",
+    zoomOut: "Zoom Out",
+    resetView: "Reset Vista",
+    deviceList: "Elenco Dispositivi",
+    selectVulnerability: "Seleziona vulnerabilità",
+    linkDevices: "Collega Dispositivi",
+    cancelLinking: "Annulla Collegamento",
+    viewDetails: "Vedi Dettagli",
+    showMap: "Mostra Mappa",
+    "networkMap.iconsSize": "Dimensione Icone",
+    "networkMap.currentZoom": "Zoom Attuale",
+    "networkMap.openPorts": "Porte Aperte",
+    "networkMap.cableConnections": "Connessioni Cavo",
+    
+    // Common
+    save: "Salva",
+    cancel: "Annulla",
+    delete: "Elimina",
+    confirm: "Conferma",
+    loading: "Caricamento",
+    error: "Errore",
+    success: "Successo",
+    close: "Chiudi",
+    back: "Indietro",
+    next: "Avanti",
+    previous: "Precedente",
+    search: "Cerca",
+    noteAnalysisFailed: "Nota: L'analisi automatica dei file non è riuscita.",
+    user: "Utente",
+    securityAdmin: "Amministratore Sicurezza",
+    unknown: "Sconosciuto",
+    na: "N/D",
+    page: "Pagina",
+    translatingReport: "Traduzione del report in corso",
+    pleaseWait: "Attendere prego...",
+  },
+  en: {
+    // Menu
+    projects: "Projects",
+    reports: "Reports",
+    settings: "Settings",
+    trash: "Trash",
+    menu: "Menu",
+    
+    // Home
+    manageScans: "Manage your security scans",
+    newProject: "New Project",
+    noProjects: "No projects",
+    createFirstProject: "Create your first project to start managing security scans",
+    createProject: "Create Project",
+    resolved: "resolved",
+    confirmDelete: "Are you sure you want to delete this project?",
+    projectName: "Project name",
+    projectNamePlaceholder: "E.g: Main Web Application",
+    description: "Description",
+    descriptionPlaceholder: "Briefly describe the project...",
+    optional: "optional",
+    scanFiles: "Scan files",
+    uploadFiles: "Upload files",
+    uploadFilesDescription: "XML, JSON, CSV, TXT, HTML",
+    creating: "Creating...",
+    create: "Create",
+    
+    // Project Dashboard
+    vulnerabilities: "Vulnerabilities",
+    vulnerabilityResolution: "Vulnerability Resolution",
+    networkMap: "Network Map",
+    uploadScans: "Upload Scans",
+    generateReport: "Generate Report",
+    foundVulnerabilities: "Found Vulnerabilities",
+    resolvedVulnerabilities: "Resolved Vulnerabilities",
+    scannedDevices: "Scanned Devices",
+    securityLevel: "Security Level",
+    loadingProject: "Loading project...",
+    backToProjects: "Back to Projects",
+    
+    // Vulnerabilities
+    filters: "Filters",
+    all: "All",
+    critical: "Critical",
+    high: "High",
+    medium: "Medium",
+    low: "Low",
+    info: "Info",
+    open: "Open",
+    inProgress: "In Progress",
+    resolved: "Resolved",
+    falsePositive: "False Positive",
+    severity: "Severity",
+    status: "Status",
+    ipAddress: "IP Address",
+    allIPs: "All IPs",
+    device: "Device",
+    allDevices: "All",
+    noVulnerabilities: "No vulnerabilities",
+    noVulnerabilitiesDesc: "Upload scans to get started",
+    changeFilters: "Change filters to see other vulnerabilities",
+    simpleExplanation: "Simple Explanation",
+    technicalDetails: "Technical Details",
+    affectedAsset: "Affected Asset",
+    recommendedSolution: "Recommended Solution",
+    usefulResources: "Useful Resources",
+    assignedTo: "Assigned to",
+    unassigned: "Unassigned",
+    assign: "Assign",
+    changeStatus: "Change Status",
+    
+    // Upload Scans
+    addScans: "Add Scans",
+    addScansDescription: "Upload new scans to update the project",
+    uploadInProgress: "Uploading...",
+    upload: "Upload",
+    
+    // Report Page
+    securityReport: "Security Report",
+    professionalSecurityReport: "Professional Security Report",
+    vulnerabilityAssessmentReport: "Vulnerability Assessment Report",
+    reportDate: "Date",
+    reportedBy: "Reported by",
+    auditorNamePlaceholder: "Auditor name",
+    edit: "Edit",
+    endEdit: "End Edit",
+    share: "Share",
+    download: "Download",
+    downloadPDF: "Download PDF",
+    downloadReport: "Download Report",
+    selectFormat: "Select the file format for download.",
+    pdfPrint: "PDF (Print)",
+    wordDoc: "Word (.doc)",
+    textFile: "Text (.txt)",
+    completeByAuditor: "To be completed by the auditor.",
+    addFiles: "Add files",
+    manageSections: "Manage Sections",
+    addSection: "Add Section",
+    showHiddenSection: "Show hidden section",
+    customSectionTitle: "Custom Section Title",
+    customSectionContent: "Content for the custom section...",
+    downloading: "Downloading...",
+    autoSaving: "Auto-saving...",
+    loadingReport: "Loading report...",
+    projectNotFound: "Project not found",
+    reportNotFound: "Report not found",
+    cannotLoadReport: "Could not load report data or associated project.",
+    
+    executiveSummary: "Executive Summary",
+    executiveSummaryUpper: "EXECUTIVE SUMMARY",
+    vulnerabilityOverview: "Vulnerability Overview",
+    vulnerabilityOverviewUpper: "VULNERABILITY OVERVIEW",
+    methodology: "Assessment Methodology",
+    methodologyAssessment: "Assessment Methodology",
+    methodologyUpper: "ASSESSMENT METHODOLOGY",
+    vulnerabilityDetails: "Vulnerability Details",
+    vulnerabilityDetailsUpper: "VULNERABILITY DETAILS",
+    criticalVulnerabilities: "Critical Vulnerabilities",
+    scannedAssets: "Scanned Assets",
+    scannedAssetsUpper: "SCANNED ASSETS",
+    recommendations: "Recommendations and Action Plan",
+    recommendationsAndActionPlan: "Recommendations and Action Plan",
+    recommendationsUpper: "RECOMMENDATIONS AND ACTION PLAN",
+    conclusions: "Conclusions",
+    conclusionsUpper: "CONCLUSIONS",
+    remediationActionsUndertaken: "Vulnerability resolution plan undertaken",
+    remediationActionsUndertakenUpper: "VULNERABILITY RESOLUTION PLAN UNDERTAKEN",
+
+    // New Report Structure
+    clientName: "Client Name",
+    testPeriod: "Test Period",
+    reportVersion: "Report Version",
+    contacts: "Contacts",
+    authorizationScope: "Authorization and Scope",
+    testTypeMethodology: "Test Type and Methodology",
+    findingsSummary: "Findings Summary",
+    vulnerabilityId: "ID",
+    remediationPlan: "Remediation Plan",
+    remediationPlan30d: "30-Day Plan",
+    remediationPlan60d: "60-Day Plan",
+    remediationPlan90d: "90-Day Plan",
+    immediateActions: "Immediate Priority Actions",
+    retestRequest: "Retest Request",
+    evidenceSummary: "Evidence Summary",
+    recommendedAction: "Recommended Action",
+    shareReportDescription: "Share this report via email or link.",
+    sendByEmail: "Send via Email",
+    copyLink: "Copy Link",
+    
+    totalVulnerabilities: "Total Vulnerabilities",
+    total: "Total",
+    criticalSeverity: "Critical",
+    highSeverity: "High",
+    mediumSeverity: "Medium",
+    lowSeverity: "Low",
+    
+    affectedAssets: "Affected Assets",
+    affectedAssetLabel: "Affected Asset:",
+    impact: "Impact",
+    impactLabel: "Impact:",
+    impactText: "This {{severity}} severity vulnerability affects {{assetCount}} {{assetWord}}. {{requiresImmediateAttention}}",
+    requiresImmediateAttention: "Requires immediate attention",
+    recommendedResolveSoon: "Recommended to resolve soon",
+    remedy: "Remedy",
+    recommendedRemedy: "Recommended Remediation",
+    remediationLabel: "Recommended Remediation:",
+    recommendedRemedyLabel: "Recommended Remediation:",
+    consultSecurityTeam: "Consult the security team",
+    cvss: "CVSS",
+    cve: "CVE",
+    title: "Title",
+    evidence: "Evidence",
+    image: "Image",
+    translate: "Translate",
+    generate: "Generate",
+    translatedText: "Translated text",
+    label_image: "Image",
+    label_translated_text: "Translated text",
+    
+    hostname: "Hostname",
+    ipAddressLabel: "IP Address",
+    type: "Type",
+    vulnerabilitiesCount: "Vulnerabilities",
+    risk: "Risk",
+    riskLevel: "Risk Level",
+    scannedDevicesTable: "Scanned Devices",
+    
+    safe: "SAFE",
+    
+    analyzedDevices: "Analyzed devices",
+    devices: "devices",
+    
+    confidentialDocument: "Confidential Document",
+    confidentialDescription: "This report contains sensitive security information",
+    securityPlatform: "SecureGuard Security Platform",
+    
+    fileFormat: "File Format",
+    
+    // Share
+    shareReport: "Share Report",
+    shareMethod: "Share method",
+    sendEmailOnlyAppUsers: "Send via Email (app users only)",
+    copyToClipboard: "Copy to Clipboard",
+    recipientUser: "Recipient user",
+    selectUserPlaceholder: "Select a user",
+    emailOnlyRegisteredUsersInfo: "Email can only be sent to users registered in the app",
+    clipboardCopyInfo: "The report content will be copied to clipboard",
+    sendReport: "Send Report",
+    copyReport: "Copy Report",
+    sendingInProgress: "Sending...",
+    selectUser: "Select a user",
+    reportSentSuccessfully: "Report sent successfully",
+    errorSendingReportEmail: "Error sending report email",
+    reportCopiedToClipboard: "Report copied to clipboard",
+    errorCopyingReport: "Error copying report",
+    securityReportSubject: "Security Report - {{companyName}}",
+    emailShareBody: `Dear recipient,
+
+We are sending you the security report for {{companyName}}.
+
+EXECUTIVE SUMMARY:
+{{executiveSummary}}
+
+VULNERABILITY STATISTICS:
+- Total: {{totalVulnerabilities}}
+- Critical: {{criticalVulnerabilities}}
+- High: {{highVulnerabilities}}
+- Medium: {{mediumVulnerabilities}}
+- Low: {{lowVulnerabilities}}
+
+IDENTIFIED VULNERABILITIES (extract):
+{{detailedVulnerabilitiesExtract}}
+{{moreVulnerabilities}}
+
+REMEDIATION ACTIONS:
+{{remediationActions}}
+
+ASSETS SUMMARY:
+{{assetsSummary}}
+
+RECOMMENDATIONS:
+{{recommendations}}
+
+To view the full report: {{fullReportLink}}
+
+---
+Reported by: {{auditorName}}
+Date: {{date}}
+
+SecureGuard Security Platform
+`,
+    andMoreVulnerabilities: "...and more vulnerabilities (see full report)",
+    noVulnerabilitiesIdentified: "No vulnerabilities identified",
+    noDetailedVulnerabilitiesIdentified: "No detailed vulnerabilities identified",
+    
+    aiAssistRemediation: "AI Assist for Remediation",
+    aiAssistRemediationDescription: "Ask AI to suggest remediation actions based on found vulnerabilities",
+    aiAssistRemediationExample: "E.g: Suggest action priorities for critical vulnerabilities",
+    aiAssistPrompt: `You are a cybersecurity expert. Analyze the following vulnerabilities:
+- Total: {{totalVulnerabilities}}
+- Critical: {{criticalVulnerabilities}}
+- High: {{highVulnerabilities}}
+
+Suggest concrete and prioritized actions for resolution. User's specific request: {{aiPrompt}}`,
+    remediationActionsPlaceholder: "Document here the actions taken to resolve vulnerabilities...",
+    errorGeneratingContent: "Error generating content",
+    editProject: "Edit Project",
+    editProjectDescription: "Edit the name of your project.",
+    saving: "Saving...",
+    
+    // Errors
+    errorDownloadingReport: "Error downloading report",
+    
+    reportLanguage: "Report language",
+    sections: "Sections",
+    
+    date: "Date",
+    report_name_format: "Report {{projectName}} - {{date}}",
+    report_name_format_no_project: "Report - {{date}}",
+    
+    // Reports List
+    savedReports: "Saved Reports",
+    allProjectReports: "All reports generated from your projects",
+    noReports: "No reports",
+    noReportsDesc: "Create reports from your projects to view them here",
+    creationDate: "Creation date",
+    deleteReport: "Delete this report?",
+    
+    // Settings
+    "settings.title": "Settings",
+    "settings.description": "Customize the look and behavior of the application",
+    "settings.theme.title": "Interface Theme",
+    "settings.theme.description": "Choose how you want to view the application",
+    "settings.theme.modeLabel": "Display mode",
+    "settings.theme.lightMode": "Light (Day Mode)",
+    "settings.theme.darkMode": "Dark",
+    "settings.language.title": "Language",
+    "settings.language.description": "Select the application language",
+    "settings.language.label": "Application language",
+    "settings.language.italian": "Italian",
+    "settings.language.english": "English",
+    "settings.language.spanish": "Spanish",
+    "settings.language.french": "French",
+    "settings.language.german": "German",
+    "settings.language.note": "All pages of the app will be translated",
+    
+    // Trash
+    deletedProjects: "Deleted Projects",
+    deleteAfter30Days: "Projects will be permanently deleted after 30 days",
+    restoreProject: "Restore Project",
+    deletePermanently: "Delete Permanently",
+    daysRemaining: "days remaining",
+    emptyTrash: "Empty trash",
+    noDeletedProjects: "No deleted projects",
+    deletedOn: "Deleted on",
+    restoreConfirm: "Restore",
+    deletePermanentlyConfirm: "Permanently delete",
+    cannotBeUndone: "Are you sure you want to permanently delete \"{{name}}\"? This action cannot be undone.",
+    
+    // Wizard AI
+    resolutionProgress: "Resolution Progress",
+    completed: "Completed!",
+    noOpenVulnerabilities: "No open vulnerabilities to resolve",
+    vulnerability: "Vulnerability",
+    aiAssistant: "AI Assistant",
+    deleteChat: "Delete Chat",
+    deleteAllConversation: "Delete all conversation with AI?",
+    askAIHelp: "Ask AI how to solve this vulnerability",
+    writeMessage: "Write a message...",
+    markAsResolved: "Mark as Resolved",
+    priorityLevel: "Priority",
+    estimatedEffort: "Estimated Effort",
+    aiIsTyping: "AI is typing...",
+    confirmDeleteFile: "Are you sure you want to delete \"{{fileName}}\"? All associated data will be permanently removed.",
+    scansUploadedTitle: "Already uploaded files ({count})",
+
+    // Network Map
+    networkTopology: "Network Topology",
+    networkStats: "Network Statistics",
+    totalDevices: "Total Devices",
+    activeDevices: "Active Devices",
+    criticalRisk: "Critical Risk",
+    highRisk: "High Risk",
+    deviceDetails: "Device Details",
+    operatingSystem: "Operating System",
+    openPorts: "Open Ports",
+    services: "Services",
+    lastSeen: "Last Seen",
+    connectedDevices: "Connected Devices",
+    associatedVulnerabilities: "Associated Vulnerabilities",
+    noDevices: "No devices",
+    noDevicesDesc: "Upload scans to view network map",
+    zoomIn: "Zoom In",
+    zoomOut: "Zoom Out",
+    resetView: "Reset View",
+    deviceList: "Device List",
+    selectVulnerability: "Select vulnerability",
+    linkDevices: "Link Devices",
+    cancelLinking: "Cancel Linking",
+    viewDetails: "View Details",
+    showMap: "Show Map",
+    "networkMap.iconsSize": "Icons Size",
+    "networkMap.currentZoom": "Current Zoom",
+    "networkMap.openPorts": "Open Ports",
+    "networkMap.cableConnections": "Cable Connections",
+    
+    // Common
+    save: "Save",
+    cancel: "Cancel",
+    delete: "Delete",
+    confirm: "Confirm",
+    loading: "Loading",
+    error: "Error",
+    success: "Success",
+    close: "Close",
+    back: "Back",
+    next: "Next",
+    previous: "Previous",
+    search: "Search",
+    noteAnalysisFailed: "Note: Automatic file analysis failed.",
+    user: "User",
+    securityAdmin: "Security Admin",
+    unknown: "Unknown",
+    na: "N/A",
+    page: "Page",
+    translatingReport: "Translating report",
+    pleaseWait: "Please wait...",
+  },
+  es: {
+    // Menu
+    projects: "Proyectos",
+    reports: "Informes",
+    settings: "Configuración",
+    trash: "Papelera",
+    menu: "Menú",
+    
+    // Home
+    manageScans: "Gestiona tus escaneos de seguridad",
+    newProject: "Nuevo Proyecto",
+    noProjects: "Sin proyectos",
+    createFirstProject: "Crea tu primer proyecto para comenzar a gestionar escaneos de seguridad",
+    createProject: "Crear Proyecto",
+    resolved: "resueltas",
+    confirmDelete: "¿Estás seguro de que quieres eliminar este proyecto?",
+    projectName: "Nombre del proyecto",
+    projectNamePlaceholder: "Ej: Aplicación Web Principal",
+    description: "Descripción",
+    descriptionPlaceholder: "Describe brevemente el proyecto...",
+    optional: "opcional",
+    scanFiles: "Archivos de escaneo",
+    uploadFiles: "Cargar archivos",
+    uploadFilesDescription: "XML, JSON, CSV, TXT, HTML",
+    creating: "Creando...",
+    create: "Crear",
+    
+    // Project Dashboard
+    vulnerabilities: "Vulnerabilidades",
+    vulnerabilityResolution: "Resolución de Vulnerabilidades",
+    networkMap: "Mapa de Red",
+    uploadScans: "Cargar Escaneos",
+    generateReport: "Generar Informe",
+    foundVulnerabilities: "Vulnerabilidades Encontradas",
+    resolvedVulnerabilities: "Vulnerabilidades Resueltas",
+    scannedDevices: "Dispositivos Escaneados",
+    securityLevel: "Nivel de Seguridad",
+    loadingProject: "Cargando proyecto...",
+    backToProjects: "Volver a Proyectos",
+    
+    // Vulnerabilities
+    filters: "Filtros",
+    all: "Todas",
+    critical: "Crítica",
+    high: "Alta",
+    medium: "Media",
+    low: "Baja",
+    info: "Info",
+    open: "Abierta",
+    inProgress: "En Progreso",
+    resolved: "Resuelta",
+    falsePositive: "Falso Positivo",
+    severity: "Gravedad",
+    status: "Estado",
+    ipAddress: "Dirección IP",
+    allIPs: "Todas las IPs",
+    device: "Dispositivo",
+    allDevices: "Todos",
+    noVulnerabilities: "Sin vulnerabilidades",
+    noVulnerabilitiesDesc: "Carga escaneos para comenzar",
+    changeFilters: "Cambia los filtros para ver otras vulnerabilidades",
+    simpleExplanation: "Explicación Simple",
+    technicalDetails: "Detalles Técnicos",
+    affectedAsset: "Activo Afectado",
+    recommendedSolution: "Solución Recomendada",
+    usefulResources: "Recursos Útiles",
+    assignedTo: "Asignado a",
+    unassigned: "Sin asignar",
+    assign: "Asignar",
+    changeStatus: "Cambiar Estado",
+    
+    // Upload Scans
+    addScans: "Agregar Escaneos",
+    addScansDescription: "Carga nuevos escaneos para actualizar el proyecto",
+    uploadInProgress: "Cargando...",
+    upload: "Cargar",
+    
+    // Report Page
+    securityReport: "Informe de Seguridad",
+    professionalSecurityReport: "Informe de Seguridad Profesional",
+    vulnerabilityAssessmentReport: "Informe de Evaluación de Vulnerabilidades",
+    reportDate: "Fecha",
+    reportedBy: "Elaborado por",
+    auditorNamePlaceholder: "Nombre del auditor",
+    edit: "Editar",
+    endEdit: "Finalizar Edición",
+    share: "Compartir",
+    download: "Descargar",
+    downloadPDF: "Descargar PDF",
+    downloadReport: "Descargar Informe",
+    selectFormat: "Selecciona el formato del archivo para la descarga.",
+    pdfPrint: "PDF (Impresión)",
+    wordDoc: "Word (.doc)",
+    textFile: "Texto (.txt)",
+    completeByAuditor: "A completar por el auditor.",
+    addFiles: "Añadir archivos",
+    manageSections: "Administrar Secciones",
+    addSection: "Añadir Sección",
+    showHiddenSection: "Mostrar sección oculta",
+    customSectionTitle: "Título de Sección Personalizada",
+    customSectionContent: "Contenido para la sección personalizada...",
+    downloading: "Descargando...",
+    autoSaving: "Guardando automáticamente...",
+    loadingReport: "Cargando informe...",
+    projectNotFound: "Proyecto no encontrado",
+    reportNotFound: "Informe no encontrado",
+    cannotLoadReport: "No se pudieron cargar los datos del informe o del proyecto asociado.",
+    
+    executiveSummary: "Resumen Ejecutivo",
+    executiveSummaryUpper: "RESUMEN EJECUTIVO",
+    vulnerabilityOverview: "Panorama de Vulnerabilidades",
+    vulnerabilityOverviewUpper: "PANORAMA DE VULNERABILIDADES",
+    methodology: "Metodología de Evaluación",
+    methodologyAssessment: "Metodología de Evaluación",
+    methodologyUpper: "METODOLOGÍA DE EVALUACIÓN",
+    vulnerabilityDetails: "Detalle de Vulnerabilidades",
+    vulnerabilityDetailsUpper: "DETALLE DE VULNERABILIDADES",
+    criticalVulnerabilities: "Vulnerabilidades Críticas",
+    scannedAssets: "Activos Escaneados",
+    scannedAssetsUpper: "ACTIVOS ESCANEADOS",
+    recommendations: "Recomendaciones y Plan de Acción",
+    recommendationsAndActionPlan: "Recomendaciones y Plan de Acción",
+    recommendationsUpper: "RECOMENDACIONES Y PLAN DE ACCIÓN",
+    conclusions: "Conclusiones",
+    conclusionsUpper: "CONCLUSIONES",
+    remediationActionsUndertaken: "Plan de resolución de vulnerabilidades emprendido",
+    remediationActionsUndertakenUpper: "PLAN DE RESOLUCIÓN DE VULNERABILIDADES EMPRENDIDO",
+
+    // New Report Structure
+    clientName: "Nombre del Cliente",
+    testPeriod: "Período de Prueba",
+    reportVersion: "Versión del Informe",
+    contacts: "Contactos",
+    authorizationScope: "Autorización y Alcance",
+    testTypeMethodology: "Tipo de Prueba y Metodología",
+    findingsSummary: "Resumen de Hallazgos",
+    vulnerabilityId: "ID",
+    remediationPlan: "Plan de Remediación",
+    remediationPlan30d: "Plan a 30 días",
+    remediationPlan60d: "Plan a 60 días",
+    remediationPlan90d: "Plan a 90 días",
+    immediateActions: "Acciones Inmediatas Prioritarias",
+    retestRequest: "Solicitud de Retest",
+    evidenceSummary: "Resumen de Evidencias",
+    recommendedAction: "Acción Recomendada",
+    shareReportDescription: "Comparte este informe por correo electrónico o enlace.",
+    sendByEmail: "Enviar por Email",
+    copyLink: "Copiar Enlace",
+    
+    totalVulnerabilities: "Vulnerabilidades Totales",
+    total: "Total",
+    criticalSeverity: "Críticas",
+    highSeverity: "Altas",
+    mediumSeverity: "Medias",
+    lowSeverity: "Bajas",
+    
+    affectedAssets: "Activos Afectados",
+    affectedAssetLabel: "Activo Afectado:",
+    impact: "Impacto",
+    impactLabel: "Impacto:",
+    impactText: "Esta vulnerabilidad de gravedad {{severity}} afecta a {{assetCount}} {{assetWord}}. {{requiresImmediateAttention}}",
+    requiresImmediateAttention: "Requiere atención inmediata",
+    recommendedResolveSoon: "Se recomienda resolver pronto",
+    remedy: "Remedio",
+    recommendedRemedy: "Remediación Recomendada",
+    remediationLabel: "Remediación Recomendada:",
+    recommendedRemedyLabel: "Remediación Recomendada:",
+    consultSecurityTeam: "Consultar al equipo de seguridad",
+    cvss: "CVSS",
+    cve: "CVE",
+    title: "Título",
+    evidence: "Evidencia",
+    image: "Imagen",
+    translate: "Traducir",
+    generate: "Generar",
+    translatedText: "Texto traducido",
+    label_image: "Imagen",
+    label_translated_text: "Texto traducido",
+    
+    hostname: "Hostname",
+    ipAddressLabel: "Dirección IP",
+    type: "Tipo",
+    vulnerabilitiesCount: "Vulnerabilidades",
+    risk: "Riesgo",
+    riskLevel: "Nivel de Riesgo",
+    scannedDevicesTable: "Dispositivos Escaneados",
+    
+    safe: "SEGURO",
+    
+    analyzedDevices: "Dispositivos analizados",
+    devices: "dispositivos",
+    
+    confidentialDocument: "Documento Confidencial",
+    confidentialDescription: "Este informe contiene información sensible de seguridad",
+    securityPlatform: "SecureGuard Security Platform",
+    
+    fileFormat: "Formato de Archivo",
+    
+    // Share
+    shareReport: "Compartir Informe",
+    shareMethod: "Método de compartición",
+    sendEmailOnlyAppUsers: "Enviar via Email (solo usuarios app)",
+    copyToClipboard: "Copiar al Portapapeles",
+    recipientUser: "Usuario destinatario",
+    selectUserPlaceholder: "Selecciona un usuario",
+    emailOnlyRegisteredUsersInfo: "El email solo puede ser enviado a usuarios registrados en la app",
+    clipboardCopyInfo: "El contenido del informe se copiará al portapapeles",
+    sendReport: "Enviar Informe",
+    copyReport: "Copiar Informe",
+    sendingInProgress: "Enviando...",
+    selectUser: "Selecciona un usuario",
+    reportSentSuccessfully: "Informe enviado con éxito",
+    errorSendingReportEmail: "Error al enviar el email del informe",
+    reportCopiedToClipboard: "Informe copiado al portapapeles",
+    errorCopyingReport: "Error al copiar el informe",
+    securityReportSubject: "Informe de Seguridad - {{companyName}}",
+    emailShareBody: `Estimado destinatario,
+
+Le enviamos el informe de seguridad para {{companyName}}.
+
+RESUMEN EJECUTIVO:
+{{executiveSummary}}
+
+ESTADÍSTICAS DE VULNERABILIDADES:
+- Totales: {{totalVulnerabilities}}
+- Críticas: {{criticalVulnerabilities}}
+- Altas: {{highVulnerabilities}}
+- Medias: {{mediumVulnerabilities}}
+- Bajas: {{lowVulnerabilities}}
+
+VULNERABILIDADES IDENTIFICADAS (extracto):
+{{detailedVulnerabilitiesExtract}}
+{{moreVulnerabilities}}
+
+ACCIONES DE REMEDIACIÓN:
+{{remediationActions}}
+
+RESUMEN DE ACTIVOS:
+{{assetsSummary}}
+
+RECOMENDACIONES:
+{{recommendations}}
+
+Para ver el informe completo: {{fullReportLink}}
+
+---
+Elaborado por: {{auditorName}}
+Fecha: {{date}}
+
+SecureGuard Security Platform
+`,
+    andMoreVulnerabilities: "...y más vulnerabilidades (ver informe completo)",
+    noVulnerabilitiesIdentified: "No se identificaron vulnerabilidades",
+    noDetailedVulnerabilitiesIdentified: "No se identificaron vulnerabilidades detalladas",
+    
+    aiAssistRemediation: "Asistencia IA para Remediación",
+    aiAssistRemediationDescription: "Pregunta a la IA para sugerir acciones de remediación basadas en las vulnerabilidades encontradas",
+    aiAssistRemediationExample: "Ej: Sugiere prioridades de acción para las vulnerabilidades críticas",
+    aiAssistPrompt: `Eres un experto en ciberseguridad. Analiza las siguientes vulnerabilidades:
+- Totales: {{totalVulnerabilities}}
+- Críticas: {{criticalVulnerabilities}}
+- Altas: {{highVulnerabilities}}
+
+Sugiere acciones concretas y priorizadas para la resolución. Solicitud específica del usuario: {{aiPrompt}}`,
+    remediationActionsPlaceholder: "Documenta aquí las acciones emprendidas para resolver las vulnerabilidades...",
+    errorGeneratingContent: "Error al generar el contenido",
+    editProject: "Editar Proyecto",
+    editProjectDescription: "Edita el nombre de tu proyecto.",
+    saving: "Guardando...",
+    
+    // Errors
+    errorDownloadingReport: "Error al descargar el informe",
+    
+    reportLanguage: "Idioma del informe",
+    sections: "Secciones",
+    
+    date: "Fecha",
+    report_name_format: "Informe {{projectName}} - {{date}}",
+    report_name_format_no_project: "Informe - {{date}}",
+    
+    // Reports List
+    savedReports: "Informes Guardados",
+    allProjectReports: "Todos los informes generados de tus proyectos",
+    noReports: "Sin informes",
+    noReportsDesc: "Crea informes desde tus proyectos para verlos aquí",
+    creationDate: "Fecha de creación",
+    deleteReport: "¿Eliminar este informe?",
+    
+    // Settings
+    "settings.title": "Configuración",
+    "settings.description": "Personaliza la apariencia y el comportamiento de la aplicación",
+    "settings.theme.title": "Tema de Interfaz",
+    "settings.theme.description": "Elige cómo quieres ver la aplicación",
+    "settings.theme.modeLabel": "Modo de visualización",
+    "settings.theme.lightMode": "Claro (Modo Día)",
+    "settings.theme.darkMode": "Oscuro",
+    "settings.language.title": "Idioma",
+    "settings.language.description": "Selecciona el idioma de la aplicación",
+    "settings.language.label": "Idioma de la aplicación",
+    "settings.language.italian": "Italiano",
+    "settings.language.english": "Inglés",
+    "settings.language.spanish": "Español",
+    "settings.language.french": "Francés",
+    "settings.language.german": "Alemán",
+    "settings.language.note": "Todas las páginas de la app serán traducidas",
+    
+    // Trash
+    deletedProjects: "Proyectos Eliminados",
+    deleteAfter30Days: "Los proyectos se eliminarán permanentemente después de 30 días",
+    restoreProject: "Restaurar Proyecto",
+    deletePermanently: "Eliminar Permanentemente",
+    daysRemaining: "días restantes",
+    emptyTrash: "Papelera vacía",
+    noDeletedProjects: "No hay proyectos eliminados",
+    deletedOn: "Eliminado el",
+    restoreConfirm: "Restaurar",
+    deletePermanentlyConfirm: "Eliminar permanentemente",
+    cannotBeUndone: "¿Estás seguro de que quieres eliminar permanentemente \"{{name}}\"? Esta acción no se puede deshacer.",
+    
+    // Wizard AI
+    resolutionProgress: "Progreso de Resolución",
+    completed: "¡Completado!",
+    noOpenVulnerabilities: "No hay vulnerabilidades abiertas para resolver",
+    vulnerability: "Vulnerabilidad",
+    aiAssistant: "Asistente IA",
+    deleteChat: "Eliminar Chat",
+    deleteAllConversation: "¿Eliminar toda la conversación con la IA?",
+    askAIHelp: "Pregunta a la IA cómo resolver esta vulnerabilidad",
+    writeMessage: "Escribe un mensaje...",
+    markAsResolved: "Marcar como Resuelta",
+    priorityLevel: "Prioridad",
+    estimatedEffort: "Esfuerzo Estimado",
+    aiIsTyping: "La IA está escribiendo...",
+    confirmDeleteFile: "¿Seguro que quieres eliminar \"{{fileName}}\"? Todos los datos asociados se eliminarán de forma permanente.",
+    scansUploadedTitle: "Archivos ya cargados ({count})",
+    
+    // Network Map
+    networkTopology: "Topología de Red",
+    networkStats: "Estadísticas de Red",
+    totalDevices: "Dispositivos Totales",
+    activeDevices: "Dispositivos Activos",
+    criticalRisk: "Riesgo Crítico",
+    highRisk: "Riesgo Alto",
+    deviceDetails: "Detalles del Dispositivo",
+    operatingSystem: "Sistema Operativo",
+    openPorts: "Puertos Abiertos",
+    services: "Servicios",
+    lastSeen: "Última Vez Visto",
+    connectedDevices: "Dispositivos Conectados",
+    associatedVulnerabilities: "Vulnerabilidades Asociadas",
+    noDevices: "Sin dispositivos",
+    noDevicesDesc: "Carga escaneos para ver el mapa de red",
+    zoomIn: "Acercar",
+    zoomOut: "Alejar",
+    resetView: "Restablecer Vista",
+    deviceList: "Lista de Dispositivos",
+    selectVulnerability: "Selecciona vulnerabilidad",
+    linkDevices: "Vincular Dispositivos",
+    cancelLinking: "Cancelar Vinculación",
+    viewDetails: "Ver Detalles",
+    showMap: "Mostrar Mapa",
+    "networkMap.iconsSize": "Tamaño de Iconos",
+    "networkMap.currentZoom": "Zoom Actual",
+    "networkMap.openPorts": "Puertos Abiertos",
+    "networkMap.cableConnections": "Conexiones de Cable",
+    
+    // Common
+    save: "Guardar",
+    cancel: "Cancelar",
+    delete: "Eliminar",
+    confirm: "Confirmar",
+    loading: "Cargando",
+    error: "Error",
+    success: "Éxito",
+    close: "Cerrar",
+    back: "Atrás",
+    next: "Siguiente",
+    previous: "Anterior",
+    search: "Buscar",
+    noteAnalysisFailed: "Nota: El análisis automático de archivos falló.",
+    user: "Usuario",
+    securityAdmin: "Administrador de Seguridad",
+    unknown: "Desconocido",
+    na: "N/D",
+    page: "Página",
+    translatingReport: "Traduciendo informe",
+    pleaseWait: "Por favor espere...",
+  },
+  fr: {
+    // Menu
+    projects: "Projets",
+    reports: "Rapports",
+    settings: "Paramètres",
+    trash: "Corbeille",
+    menu: "Menu",
+    
+    // Home
+    manageScans: "Gérez vos analyses de sécurité",
+    newProject: "Nouveau Projet",
+    noProjects: "Aucun projet",
+    createFirstProject: "Créez votre premier projet pour commencer à gérer les analyses de sécurité",
+    createProject: "Créer un Projet",
+    resolved: "résolues",
+    confirmDelete: "Êtes-vous sûr de vouloir supprimer ce projet?",
+    projectName: "Nom du projet",
+    projectNamePlaceholder: "Ex: Application Web Principale",
+    description: "Description",
+    descriptionPlaceholder: "Décrivez brièvement le projet...",
+    optional: "optionnel",
+    scanFiles: "Fichiers d'analyse",
+    uploadFiles: "Télécharger des fichiers",
+    uploadFilesDescription: "XML, JSON, CSV, TXT, HTML",
+    creating: "Création...",
+    create: "Créer",
+    
+    // Project Dashboard
+    vulnerabilities: "Vulnérabilités",
+    vulnerabilityResolution: "Résolution des Vulnérabilités",
+    networkMap: "Carte Réseau",
+    uploadScans: "Télécharger Analyses",
+    generateReport: "Générer Rapport",
+    foundVulnerabilities: "Vulnérabilités Trouvées",
+    resolvedVulnerabilities: "Vulnérabilités Résolues",
+    scannedDevices: "Appareils Analysés",
+    securityLevel: "Niveau de Sécurité",
+    loadingProject: "Chargement du projet...",
+    backToProjects: "Retour aux Projets",
+    
+    // Vulnerabilities
+    filters: "Filtres",
+    all: "Toutes",
+    critical: "Critique",
+    high: "Élevée",
+    medium: "Moyenne",
+    low: "Faible",
+    info: "Info",
+    open: "Ouverte",
+    inProgress: "En Cours",
+    resolved: "Résolue",
+    falsePositive: "Faux Positif",
+    severity: "Gravité",
+    status: "Statut",
+    ipAddress: "Adresse IP",
+    allIPs: "Toutes les IPs",
+    device: "Appareil",
+    allDevices: "Tous",
+    noVulnerabilities: "Aucune vulnérabilité",
+    noVulnerabilitiesDesc: "Téléchargez des analyses pour commencer",
+    changeFilters: "Modifiez les filtres pour voir d'autres vulnérabilités",
+    simpleExplanation: "Explication Simple",
+    technicalDetails: "Détails Techniques",
+    affectedAsset: "Actif Affecté",
+    recommendedSolution: "Solution Recommandée",
+    usefulResources: "Ressources Utiles",
+    assignedTo: "Assigné à",
+    unassigned: "Non assigné",
+    assign: "Assigner",
+    changeStatus: "Changer le Statut",
+    
+    // Upload Scans
+    addScans: "Ajouter des Analyses",
+    addScansDescription: "Téléchargez de nouvelles analyses pour mettre à jour le projet",
+    uploadInProgress: "Téléchargement...",
+    upload: "Télécharger",
+    
+    // Report Page
+    securityReport: "Rapport de Sécurité",
+    professionalSecurityReport: "Rapport de Sécurité Professionnel",
+    vulnerabilityAssessmentReport: "Rapport d'Évaluation des Vulnérabilités",
+    reportDate: "Date",
+    reportedBy: "Rédigé par",
+    auditorNamePlaceholder: "Nom de l'auditeur",
+    edit: "Modifier",
+    endEdit: "Fin de Modification",
+    share: "Partager",
+    download: "Télécharger",
+    downloadPDF: "Télécharger PDF",
+    downloadReport: "Télécharger Rapport",
+    selectFormat: "Sélectionnez le format de fichier pour le téléchargement.",
+    pdfPrint: "PDF (Impression)",
+    wordDoc: "Word (.doc)",
+    textFile: "Texte (.txt)",
+    completeByAuditor: "À compléter par l'auditeur.",
+    addFiles: "Ajouter des fichiers",
+    manageSections: "Gérer les Sections",
+    addSection: "Ajouter une Section",
+    showHiddenSection: "Afficher la section cachée",
+    customSectionTitle: "Titre de Section Personnalisée",
+    customSectionContent: "Contenu pour la section personnalisée...",
+    downloading: "Téléchargement...",
+    autoSaving: "Sauvegarde automatique...",
+    loadingReport: "Chargement du rapport...",
+    projectNotFound: "Projet introuvable",
+    reportNotFound: "Rapport non trouvé",
+    cannotLoadReport: "Impossible de charger les données du rapport ou le projet associé.",
+    
+    executiveSummary: "Résumé Exécutif",
+    executiveSummaryUpper: "RÉSUMÉ EXÉCUTIF",
+    vulnerabilityOverview: "Vue d'Ensemble des Vulnérabilités",
+    vulnerabilityOverviewUpper: "VUE D'ENSEMBLE DES VULNÉRABILITÉS",
+    methodology: "Méthodologie d'Évaluation",
+    methodologyAssessment: "Méthodologie d'Évaluation",
+    methodologyUpper: "MÉTHODOLOGIE D'ÉVALUATION",
+    vulnerabilityDetails: "Détails des Vulnérabilités",
+    vulnerabilityDetailsUpper: "DÉTAILS DES VULNÉRABILITÉS",
+    criticalVulnerabilities: "Vulnérabilités Critiques",
+    scannedAssets: "Actifs Analysés",
+    scannedAssetsUpper: "ACTIFS ANALYSÉS",
+    recommendations: "Recommandations et Plan d'Action",
+    recommendationsAndActionPlan: "Recommandations et Plan d'Action",
+    recommendationsUpper: "RECOMMANDATIONS ET PLAN D'ACTION",
+    conclusions: "Conclusions",
+    conclusionsUpper: "CONCLUSIONS",
+    remediationActionsUndertaken: "Plan de résolution des vulnérabilités entrepris",
+    remediationActionsUndertakenUpper: "PLAN DE RÉSOLUTION DES VULNÉRABILITÉS ENTREPRIS",
+
+    // New Report Structure
+    clientName: "Nom du Client",
+    testPeriod: "Période de Test",
+    reportVersion: "Version du Rapport",
+    contacts: "Contacts",
+    authorizationScope: "Autorisation et Périmètre",
+    testTypeMethodology: "Type de Test et Méthodologie",
+    findingsSummary: "Résumé des Résultats",
+    vulnerabilityId: "ID",
+    remediationPlan: "Plan de Remédiation",
+    remediationPlan30d: "Plan à 30 jours",
+    remediationPlan60d: "Plan à 60 jours",
+    remediationPlan90d: "Plan à 90 jours",
+    immediateActions: "Actions Immédiates Prioritaires",
+    retestRequest: "Demande de Retest",
+    evidenceSummary: "Résumé des Preuves",
+    recommendedAction: "Action Recommandée",
+    shareReportDescription: "Partagez ce rapport par e-mail ou par lien.",
+    sendByEmail: "Envoyer par E-mail",
+    copyLink: "Copier le lien",
+    
+    totalVulnerabilities: "Vulnérabilités Totales",
+    total: "Total",
+    criticalSeverity: "Critiques",
+    highSeverity: "Élevées",
+    mediumSeverity: "Moyennes",
+    lowSeverity: "Faibles",
+    
+    affectedAssets: "Actifs Affectés",
+    affectedAssetLabel: "Actif Affecté:",
+    impact: "Impact",
+    impactLabel: "Impact:",
+    impactText: "Cette vulnérabilité de gravité {{severity}} affecte {{assetCount}} {{assetWord}}. {{requiresImmediateAttention}}",
+    requiresImmediateAttention: "Nécessite une attention immédiate",
+    recommendedResolveSoon: "Recommandé de résoudre rapidement",
+    remedy: "Remède",
+    recommendedRemedy: "Remédiation Recommandée",
+    remediationLabel: "Remédiation Recommandée:",
+    recommendedRemedyLabel: "Remédiation Recommandée:",
+    consultSecurityTeam: "Consulter l'équipe de sécurité",
+    cvss: "CVSS",
+    cve: "CVE",
+    title: "Titre",
+    evidence: "Preuve",
+    image: "Image",
+    translate: "Traduire",
+    generate: "Générer",
+    translatedText: "Texte traduit",
+    label_image: "Image",
+    label_translated_text: "Texte traduit",
+    
+    hostname: "Nom d'hôte",
+    ipAddressLabel: "Adresse IP",
+    type: "Type",
+    vulnerabilitiesCount: "Vulnérabilités",
+    risk: "Risque",
+    riskLevel: "Niveau de Risque",
+    scannedDevicesTable: "Appareils Analysés",
+    
+    safe: "SÛR",
+    
+    analyzedDevices: "Appareils analysés",
+    devices: "appareils",
+    
+    confidentialDocument: "Document Confidentiel",
+    confidentialDescription: "Ce rapport contient des informations sensibles sur la sécurité",
+    securityPlatform: "SecureGuard Security Platform",
+    
+    fileFormat: "Format de Fichier",
+    
+    // Share
+    shareReport: "Partager le rapport",
+    shareMethod: "Méthode de partage",
+    sendEmailOnlyAppUsers: "Envoyer par e-mail (utilisateurs de l'application uniquement)",
+    copyToClipboard: "Copier dans le presse-papiers",
+    recipientUser: "Utilisateur destinataire",
+    selectUserPlaceholder: "Sélectionner un utilisateur",
+    emailOnlyRegisteredUsersInfo: "L'e-mail ne peut être envoyé qu'aux utilisateurs enregistrés dans l'application",
+    clipboardCopyInfo: "Le contenu du rapport sera copié dans le presse-papiers",
+    sendReport: "Envoyer le rapport",
+    copyReport: "Copier le rapport",
+    sendingInProgress: "Envoi en cours...",
+    selectUser: "Sélectionner un utilisateur",
+    reportSentSuccessfully: "Rapport envoyé avec succès",
+    errorSendingReportEmail: "Erreur lors de l'envoi de l'e-mail du rapport",
+    reportCopiedToClipboard: "Rapport copié dans le presse-papiers",
+    errorCopyingReport: "Erreur lors de la copie du rapport",
+    securityReportSubject: "Rapport de Sécurité - {{companyName}}",
+    emailShareBody: `Cher destinataire,
+
+Nous vous envoyons le rapport de sécurité pour {{companyName}}.
+
+RÉSUMÉ EXÉCUTIF:
+{{executiveSummary}}
+
+STATISTIQUES DES VULNÉRABILITÉS:
+- Total: {{totalVulnerabilities}}
+- Critiques: {{criticalVulnerabilities}}
+- Élevées: {{highVulnerabilities}}
+- Moyennes: {{mediumVulnerabilities}}
+- Faibles: {{lowVulnerabilities}}
+
+VULNÉRABILITÉS IDENTIFIÉES (extrait):
+{{detailedVulnerabilitiesExtract}}
+{{moreVulnerabilities}}
+
+ACTIONS DE REMÉDIATION:
+{{remediationActions}}
+
+RÉSUMÉ DES ACTIFS:
+{{assetsSummary}}
+
+RECOMMANDATIONS:
+{{recommendations}}
+
+Pour consulter le rapport complet: {{fullReportLink}}
+
+---
+Rédigé par: {{auditorName}}
+Data: {{date}}
+
+SecureGuard Security Platform
+`,
+    andMoreVulnerabilities: "...et plus de vulnérabilités (voir le rapport complet)",
+    noVulnerabilitiesIdentified: "Aucune vulnérabilité identifiée",
+    noDetailedVulnerabilitiesIdentified: "Aucune vulnérabilité détaillée identifiée",
+    
+    aiAssistRemediation: "Assistance IA pour la Remédiation",
+    aiAssistRemediationDescription: "Demandez à l'IA de suggérer des actions de remédiation basées sur les vulnérabilités trouvées",
+    aiAssistRemediationExample: "Ex: Suggérez des priorités d'action pour les vulnérabilités critiques",
+    aiAssistPrompt: `Vous êtes un expert en cybersécurité. Analysez les vulnérabilités suivantes:
+- Total: {{totalVulnerabilities}}
+- Critique: {{criticalVulnerabilities}}
+- Élevée: {{highVulnerabilities}}
+
+Suggérez des actions concrètes et priorisées pour la résolution. Demande spécifique de l'utilisateur: {{aiPrompt}}`,
+    remediationActionsPlaceholder: "Documentez ici les actions entreprises pour résoudre les vulnérabilités...",
+    errorGeneratingContent: "Erreur lors de la génération du contenu",
+    editProject: "Modifier le Projet",
+    editProjectDescription: "Modifiez le nom de votre projet.",
+    saving: "Enregistrement...",
+    
+    // Errors
+    errorDownloadingReport: "Erreur lors du téléchargement du rapport",
+    
+    reportLanguage: "Langue du rapport",
+    sections: "Sections",
+    
+    date: "Date",
+    report_name_format: "Rapport {{projectName}} - {{date}}",
+    report_name_format_no_project: "Rapport - {{date}}",
+    
+    // Reports List
+    savedReports: "Rapports Sauvegardés",
+    allProjectReports: "Tous les rapports générés à partir de vos projets",
+    noReports: "Aucun rapport",
+    noReportsDesc: "Créez des rapports à partir de vos projets pour les voir ici",
+    creationDate: "Date de création",
+    deleteReport: "Supprimer ce rapport?",
+    
+    // Settings
+    "settings.title": "Paramètres",
+    "settings.description": "Personalisez l'apparence et le comportement de l'application",
+    "settings.theme.title": "Thème Interface",
+    "settings.theme.description": "Choisissez comment vous voulez voir l'application",
+    "settings.theme.modeLabel": "Mode d'affichage",
+    "settings.theme.lightMode": "Clair (Mode Jour)",
+    "settings.theme.darkMode": "Sombre",
+    "settings.language.title": "Langue",
+    "settings.language.description": "Sélectionnez la langue de l'application",
+    "settings.language.label": "Langue de l'application",
+    "settings.language.italian": "Italien",
+    "settings.language.english": "Anglais",
+    "settings.language.spanish": "Espagnol",
+    "settings.language.french": "Français",
+    "settings.language.german": "Alemand",
+    "settings.language.note": "Toutes les pages de l'app seront traduites",
+    
+    // Trash
+    deletedProjects: "Projets Supprimés",
+    deleteAfter30Days: "Les projets seront définitivement supprimés après 30 jours",
+    restoreProject: "Restaurer Projet",
+    deletePermanently: "Supprimer Définitivement",
+    daysRemaining: "jours restants",
+    emptyTrash: "Corbeille vide",
+    noDeletedProjects: "Aucun projet supprimé",
+    deletedOn: "Supprimé le",
+    restoreConfirm: "Restaurer",
+    deletePermanentlyConfirm: "Supprimer définitivement",
+    cannotBeUndone: "Êtes-vous sûr de vouloir supprimer définitivement \"{{name}}\" ? Cette action est irréversible.",
+    
+    // Wizard AI
+    resolutionProgress: "Progrès de Résolution",
+    completed: "Terminé!",
+    noOpenVulnerabilities: "Aucune vulnérabilité ouverte à résoudre",
+    vulnerability: "Vulnérabilité",
+    aiAssistant: "Assistant IA",
+    deleteChat: "Supprimer le Chat",
+    deleteAllConversation: "Supprimer toute la conversation avec l'IA?",
+    askAIHelp: "Demandez à l'IA comment résoudre cette vulnérabilité",
+    writeMessage: "Écrire un message...",
+    markAsResolved: "Marquer comme Résolu",
+    priorityLevel: "Priorité",
+    estimatedEffort: "Effort Estimé",
+    aiIsTyping: "L'AI est en train d'écrire...",
+    confirmDeleteFile: "Êtes-vous sûr de vouloir supprimer \"{{fileName}}\" ? Toutes les données associées seront définitivement supprimées.",
+    scansUploadedTitle: "Fichiers déjà téléchargés ({count})",
+    
+    // Network Map
+    networkTopology: "Topologie Réseau",
+    networkStats: "Statistiques Réseau",
+    totalDevices: "Appareils Totaux",
+    activeDevices: "Appareils Actifs",
+    criticalRisk: "Risque Critique",
+    highRisk: "Risque Élevé",
+    deviceDetails: "Détails de l'Appareil",
+    operatingSystem: "Système d'Exploitation",
+    openPorts: "Ports Ouverts",
+    services: "Services",
+    lastSeen: "Dernière Fois Vu",
+    connectedDevices: "Appareils Connectés",
+    associatedVulnerabilities: "Vulnerabilités Associées",
+    noDevices: "Aucun appareil",
+    noDevicesDesc: "Téléchargez des analyses pour voir la carte réseau",
+    zoomIn: "Zoomer",
+    zoomOut: "Dézoomer",
+    resetView: "Réinitialiser la Vue",
+    deviceList: "Liste des Appareils",
+    selectVulnerability: "Sélectionner une vulnérabilité",
+    linkDevices: "Lier des Appareils",
+    cancelLinking: "Annuler le Lien",
+    viewDetails: "Voir les Détails",
+    showMap: "Afficher la carte",
+    "networkMap.iconsSize": "Taille des Icônes",
+    "networkMap.currentZoom": "Zoom Actuel",
+    "networkMap.openPorts": "Ports Ouverts",
+    "networkMap.cableConnections": "Connexions par Câble",
+    
+    // Common
+    save: "Enregistrer",
+    cancel: "Annuler",
+    delete: "Supprimer",
+    confirm: "Confirmer",
+    loading: "Chargement",
+    error: "Erreur",
+    success: "Succès",
+    close: "Fermer",
+    back: "Retour",
+    next: "Suivant",
+    previous: "Précédent",
+    search: "Rechercher",
+    noteAnalysisFailed: "Note: L'analyse automatique des fichiers a échoué.",
+    user: "Utilisateur",
+    securityAdmin: "Administrateur de Sécurité",
+    unknown: "Inconnu",
+    na: "N/D",
+    page: "Page",
+    translatingReport: "Traduction du rapport en cours",
+    pleaseWait: "Veuillez patienter...",
+  },
+  de: {
+    // Menu
+    projects: "Projekte",
+    reports: "Berichte",
+    settings: "Einstellungen",
+    trash: "Papierkorb",
+    menu: "Menü",
+    
+    // Home
+    manageScans: "Verwalten Sie Ihre Sicherheitsscans",
+    newProject: "Neues Projekt",
+    noProjects: "Keine Projekte",
+    createFirstProject: "Erstellen Sie Ihr erstes Projekt, um Sicherheitsscans zu verwalten",
+    createProject: "Projekt Erstellen",
+    resolved: "gelöst",
+    confirmDelete: "Sind Sie sicher, dass Sie dieses Projekt löschen möchten?",
+    projectName: "Projektname",
+    projectNamePlaceholder: "Z.B: Haupt-Webanwendung",
+    description: "Beschreibung",
+    descriptionPlaceholder: "Beschreiben Sie das Projekt kurz...",
+    optional: "optional",
+    scanFiles: "Scan-Dateien",
+    uploadFiles: "Dateien hochladen",
+    uploadFilesDescription: "XML, JSON, CSV, TXT, HTML",
+    creating: "Erstellen...",
+    create: "Erstellen",
+    
+    // Project Dashboard
+    vulnerabilities: "Schwachstellen",
+    vulnerabilityResolution: "Schwachstellenbehebung",
+    networkMap: "Netzwerkkarte",
+    uploadScans: "Scans Hochladen",
+    generateReport: "Bericht Generieren",
+    foundVulnerabilities: "Gefundene Schwachstellen",
+    resolvedVulnerabilities: "Gelöste Schwachstellen",
+    scannedDevices: "Gescannte Geräte",
+    securityLevel: "Sicherheitsstufe",
+    loadingProject: "Projekt wird geladen...",
+    backToProjects: "Zurück zu Projekten",
+    
+    // Vulnerabilities
+    filters: "Filter",
+    all: "Alle",
+    critical: "Kritisch",
+    high: "Hoch",
+    medium: "Mittel",
+    low: "Niedrig",
+    info: "Info",
+    open: "Offen",
+    inProgress: "In Bearbeitung",
+    resolved: "Gelöst",
+    falsePositive: "Falsch Positiv",
+    severity: "Schweregrad",
+    status: "Status",
+    ipAddress: "IP-Adresse",
+    allIPs: "Alle IPs",
+    device: "Gerät",
+    allDevices: "Alle",
+    noVulnerabilities: "Keine Schwachstellen",
+    noVulnerabilitiesDesc: "Laden Sie Scans hoch, um zu beginnen",
+    changeFilters: "Ändern Sie die Filter, um andere Schwachstellen zu sehen",
+    simpleExplanation: "Einfache Erklärung",
+    technicalDetails: "Technische Details",
+    affectedAsset: "Betroffenes Asset",
+    recommendedSolution: "Empfohlene Lösung",
+    usefulResources: "Nützliche Ressourcen",
+    assignedTo: "Zugewiesen an",
+    unassigned: "Nicht zugewiesen",
+    assign: "Zuweisen",
+    changeStatus: "Status Ändern",
+    
+    // Upload Scans
+    addScans: "Scans Hinzufügen",
+    addScansDescription: "Laden Sie neue Scans hoch, um das Projekt zu aktualisieren",
+    uploadInProgress: "Hochladen...",
+    upload: "Hochladen",
+    
+    // Report Page
+    securityReport: "Sicherheitsbericht",
+    professionalSecurityReport: "Professioneller Sicherheitsbericht",
+    vulnerabilityAssessmentReport: "Schwachstellenbewertungsbericht",
+    reportDate: "Datum",
+    reportedBy: "Erstellt von",
+    auditorNamePlaceholder: "Name des Prüfers",
+    edit: "Bearbeiten",
+    endEdit: "Bearbeitung Beenden",
+    share: "Teilen",
+    download: "Herunterladen",
+    downloadPDF: "PDF Herunterladen",
+    downloadReport: "Bericht Herunterladen",
+    selectFormat: "Wählen Sie das Dateiformat für den Download.",
+    pdfPrint: "PDF (Drucken)",
+    wordDoc: "Word (.doc)",
+    textFile: "Text (.txt)",
+    completeByAuditor: "Vom Prüfer auszufüllen.",
+    addFiles: "Dateien hinzufügen",
+    manageSections: "Abschnitte verwalten",
+    addSection: "Abschnitt hinzufügen",
+    showHiddenSection: "Ausgeblendeten Abschnitt anzeigen",
+    customSectionTitle: "Benutzerdefinierter Abschnittstitel",
+    customSectionContent: "Inhalt für den benutzerdefinierten Abschnitt...",
+    downloading: "Herunterladen...",
+    autoSaving: "Automatisch speichern...",
+    loadingReport: "Bericht wird geladen...",
+    projectNotFound: "Projekt nicht gefunden",
+    reportNotFound: "Bericht nicht gefunden",
+    cannotLoadReport: "Berichtsdaten oder zugehöriges Projekt konnten nicht geladen werden.",
+    
+    executiveSummary: "Zusammenfassung",
+    executiveSummaryUpper: "ZUSAMMENFASSUNG",
+    vulnerabilityOverview: "Schwachstellenübersicht",
+    vulnerabilityOverviewUpper: "SCHWACHSTELLENÜBERSICHT",
+    methodology: "Bewertungsmethodik",
+    methodologyAssessment: "Bewertungsmethodik",
+    methodologyUpper: "BEWERTUNGSMETHODIK",
+    vulnerabilityDetails: "Schwachstellendetails",
+    vulnerabilityDetailsUpper: "SCHWACHSTELLENDETAILS",
+    criticalVulnerabilities: "Kritische Schwachstellen",
+    scannedAssets: "Gescannte Assets",
+    scannedAssetsUpper: "GESCANNTE ASSETS",
+    recommendations: "Empfehlungen und Aktionsplan",
+    recommendationsAndActionPlan: "Empfehlungen und Aktionsplan",
+    recommendationsUpper: "EMPFEHLUNGEN UND AKTIONSPLAN",
+    conclusions: "Schlussfolgerungen",
+    conclusionsUpper: "SCHLUSSFOLGERUNGEN",
+    remediationActionsUndertaken: "Durchgeführter Plan zur Schwachstellenbehebung",
+    remediationActionsUndertakenUpper: "DURCHGEFÜHRTER PLAN ZUR SCHWACHSTELLENBEHEBUNG",
+
+    // New Report Structure
+    clientName: "Kundenname",
+    testPeriod: "Testzeitraum",
+    reportVersion: "Berichtsversion",
+    contacts: "Kontakte",
+    authorizationScope: "Autorisierung und Umfang",
+    testTypeMethodology: "Testtyp und Methodik",
+    findingsSummary: "Zusammenfassung der Ergebnisse",
+    vulnerabilityId: "ID",
+    remediationPlan: "Behebungsplan",
+    remediationPlan30d: "30-Tage-Plan",
+    remediationPlan60d: "60-Tage-Plan",
+    remediationPlan90d: "90-Tage-Plan",
+    immediateActions: "Sofortige Prioritätsmaßnahmen",
+    retestRequest: "Antrag auf Nachtest",
+    evidenceSummary: "Zusammenfassung der Nachweise",
+    recommendedAction: "Empfohlene Maßnahme",
+    shareReportDescription: "Teilen Sie diesen Bericht per E-Mail oder Link.",
+    sendByEmail: "Per E-Mail senden",
+    copyLink: "Link kopieren",
+    
+    totalVulnerabilities: "Gesamte Schwachstellen",
+    total: "Gesamt",
+    criticalSeverity: "Kritisch",
+    highSeverity: "Hoch",
+    mediumSeverity: "Mittel",
+    lowSeverity: "Niedrig",
+    
+    affectedAssets: "Betroffene Assets",
+    affectedAssetLabel: "Betroffenes Asset:",
+    impact: "Auswirkung",
+    impactLabel: "Auswirkung:",
+    impactText: "Diese Schwachstelle mit {{severity}}-Schweregrad betrifft {{assetCount}} {{assetWord}}. {{requiresImmediateAttention}}",
+    requiresImmediateAttention: "Benötigt sofortige Aufmerksamkeit",
+    recommendedResolveSoon: "Es wird empfohlen, bald zu beheben",
+    remedy: "Abhilfe",
+    recommendedRemedy: "Empfohlene Behebung",
+    remediationLabel: "Empfohlene Behebung:",
+    recommendedRemedyLabel: "Empfohlene Behebung:",
+    consultSecurityTeam: "Sicherheitsteam konsultieren",
+    cvss: "CVSS",
+    cve: "CVE",
+    title: "Titel",
+    evidence: "Nachweis",
+    image: "Bild",
+    translate: "Übersetzen",
+    generate: "Generieren",
+    translatedText: "Übersetzter Text",
+    label_image: "Bild",
+    label_translated_text: "Übersetzter Text",
+    
+    hostname: "Hostname",
+    ipAddressLabel: "IP-Adresse",
+    type: "Typ",
+    vulnerabilitiesCount: "Schwachstellen",
+    risk: "Risiko",
+    riskLevel: "Risikoniveau",
+    scannedDevicesTable: "Gescannte Geräte",
+    
+    safe: "SICHER",
+    
+    analyzedDevices: "Analysierte Geräte",
+    devices: "Geräte",
+    
+    confidentialDocument: "Vertrauliches Dokument",
+    confidentialDescription: "Dieser Bericht enthält sensible Sicherheitsinformationen",
+    securityPlatform: "SecureGuard Security Platform",
+    
+    fileFormat: "Dateiformat",
+    
+    // Share
+    shareReport: "Bericht teilen",
+    shareMethod: "Teilungsmethode",
+    sendEmailOnlyAppUsers: "Per E-Mail senden (nur App-Benutzer)",
+    copyToClipboard: "In die Zwischenablage kopieren",
+    recipientUser: "Empfänger",
+    selectUserPlaceholder: "Benutzer auswählen",
+    emailOnlyRegisteredUsersInfo: "E-Mails können nur an in der App registrierte Benutzer gesendet werden",
+    clipboardCopyInfo: "Der Berichtsinhalt wird in die Zwischenablage kopiert",
+    sendReport: "Bericht senden",
+    copyReport: "Bericht kopieren",
+    sendingInProgress: "Senden...",
+    selectUser: "Benutzer auswählen",
+    reportSentSuccessfully: "Bericht erfolgreich gesendet",
+    errorSendingReportEmail: "Fehler beim Senden der Berichts-E-Mail",
+    reportCopiedToClipboard: "Bericht in die Zwischenablage kopiert",
+    errorCopyingReport: "Fehler beim Kopieren des Berichts",
+    securityReportSubject: "Sicherheitsbericht - {{companyName}}",
+    emailShareBody: `Sehr geehrter Empfänger,
+
+Wir senden Ihnen den Sicherheitsbericht für {{companyName}}.
+
+ZUSAMMENFASSUNG:
+{{executiveSummary}}
+
+SCHWACHSTELLENSTATISTIKEN:
+- Gesamt: {{totalVulnerabilities}}
+- Kritisch: {{criticalVulnerabilities}}
+- Hoch: {{highVulnerabilities}}
+- Mittel: {{mediumVulnerabilities}}
+- Niedrig: {{lowVulnerabilities}}
+
+IDENTIFIZIERTE SCHWACHSTELLEN (Auszug):
+{{detailedVulnerabilitiesExtract}}
+{{moreVulnerabilities}}
+
+BEHEBUNGSMASSNAHMEN:
+{{remediationActions}}
+
+ASSET-ÜBERSICHT:
+{{assetsSummary}}
+
+EMPFEHLUNGEN:
+{{recommendationen}}
+
+Den vollständigen Bericht finden Sie unter: {{fullReportLink}}
+
+---
+Erstellt von: {{auditorName}}
+Datum: {{date}}
+
+SecureGuard Security Platform
+`,
+    andMoreVulnerabilities: "...und weitere Schwachstellen (siehe vollständigen Bericht)",
+    noVulnerabilitiesIdentified: "Keine Schwachstellen identifiziert",
+    noDetailedVulnerabilitiesIdentified: "Keine detaillierten Schwachstellen identifiziert",
+    
+    aiAssistRemediation: "KI-Unterstützung für die Behebung",
+    aiAssistRemediationDescription: "Bitten Sie die KI um Vorschläge für Behebungsmaßnahmen basierend auf gefundenen Schwachstellen",
+    aiAssistRemediationExample: "Z.B.: Priorisierung von Maßnahmen für kritische Schwachstellen vorschlagen",
+    aiAssistPrompt: `Sie sind ein Cybersicherheitsexperte. Analysieren Sie die folgenden Schwachstellen:
+- Gesamt: {{totalVulnerabilities}}
+- Kritisch: {{criticalVulnerabilities}}
+- Hoch: {{highVulnerabilities}}
+
+Schlagen Sie konkrete und priorisierte Maßnahmen zur Lösung vor. Spezifische Benutzeranfrage: {{aiPrompt}}`,
+    remediationActionsPlaceholder: "Dokumentieren Sie hier die ergriffenen Maßnahmen zur Behebung von Schwachstellen...",
+    errorGeneratingContent: "Fehler beim Generieren von Inhalten",
+    editProject: "Projekt Bearbeiten",
+    editProjectDescription: "Bearbeiten Sie den Namen Ihres Projekts.",
+    saving: "Speichern...",
+
+    // Errors
+    errorDownloadingReport: "Fehler beim Herunterladen des Berichts",
+    
+    reportLanguage: "Berichtssprache",
+    sections: "Abschnitte",
+    
+    date: "Datum",
+    report_name_format: "Bericht {{projectName}} - {{date}}",
+    report_name_format_no_project: "Bericht - {{date}}",
+    
+    // Reports List
+    savedReports: "Gespeicherte Berichte",
+    allProjectReports: "Alle aus Ihren Projekten generierten Berichte",
+    noReports: "Keine Berichte",
+    noReportsDesc: "Erstellen Sie Berichte aus Ihren Projekten, um sie hier anzuzeigen",
+    creationDate: "Erstellungsdatum",
+    deleteReport: "Diesen Bericht löschen?",
+    
+    // Settings
+    "settings.title": "Einstellungen",
+    "settings.description": "Passen Sie das Aussehen und Verhalten der Anwendung an",
+    "settings.theme.title": "Oberflächenthema",
+    "settings.theme.description": "Wählen Sie, wie Sie die Anwendung anzeigen möchten",
+    "settings.theme.modeLabel": "Anzeigemodus",
+    "settings.theme.lightMode": "Hell (Tagmodus)",
+    "settings.theme.darkMode": "Dunkel",
+    "settings.language.title": "Sprache",
+    "settings.language.description": "Wählen Sie die Anwendungssprache",
+    "settings.language.label": "Anwendungssprache",
+    "settings.language.italian": "Italienisch",
+    "settings.language.english": "Englisch",
+    "settings.language.spanish": "Spanisch",
+    "settings.language.french": "Französisch",
+    "settings.language.german": "Deutsch",
+    "settings.language.note": "Alle Seiten der App werden übersetzt",
+    
+    // Trash
+    deletedProjects: "Gelöschte Projekte",
+    deleteAfter30Days: "Projekte werden nach 30 Tagen endgültig gelöscht",
+    restoreProject: "Projekt Wiederherstellen",
+    deletePermanently: "Dauerhaft Löschen",
+    daysRemaining: "Tage verbleibend",
+    emptyTrash: "Papierkorb leer",
+    noDeletedProjects: "Keine gelöschten Projekte",
+    deletedOn: "Gelöscht am",
+    restoreConfirm: "Wiederherstellen",
+    deletePermanentlyConfirm: "Dauerhaft löschen",
+    cannotBeUndone: "Möchten Sie \"{{name}}\" wirklich endgültig löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+    
+    // Wizard AI
+    resolutionProgress: "Lösungsfortschritt",
+    completed: "Abgeschlossen!",
+    noOpenVulnerabilities: "Keine offenen Schwachstellen zu beheben",
+    vulnerability: "Schwachstelle",
+    aiAssistant: "KI-Assistent",
+    deleteChat: "Chat Löschen",
+    deleteAllConversation: "Gesamte Konversation mit KI löschen?",
+    askAIHelp: "Fragen Sie die KI, wie diese Schwachstelle behoben werden kann",
+    writeMessage: "Nachricht schreiben...",
+    markAsResolved: "Als Gelöst Markieren",
+    priorityLevel: "Priorität",
+    estimatedEffort: "Geschätzter Aufwand",
+    aiIsTyping: "KI tippt...",
+    confirmDeleteFile: "Möchten Sie \"{{fileName}}\" wirklich löschen? Alle zugehörigen Daten werden dauerhaft entfernt.",
+    scansUploadedTitle: "Bereits hochgeladene Dateien ({count})",
+    
+    // Network Map
+    networkTopology: "Netzwerktopologie",
+    networkStats: "Netzwerkstatistiken",
+    totalDevices: "Gesamte Geräte",
+    activeDevices: "Aktive Geräte",
+    criticalRisk: "Kritisches Risiko",
+    highRisk: "Hohes Risiko",
+    deviceDetails: "Gerätedetails",
+    operatingSystem: "Betriebssystem",
+    openPorts: "Offene Ports",
+    services: "Dienste",
+    lastSeen: "Zuletzt Gesehen",
+    connectedDevices: "Verbundene Geräte",
+    associatedVulnerabilities: "Zugeordnete Schwachstellen",
+    noDevices: "Keine Geräte",
+    noDevicesDesc: "Laden Sie Scans hoch, um die Netzwerkkarte anzuzeigen",
+    zoomIn: "Vergrößern",
+    zoomOut: "Verkleinern",
+    resetView: "Ansicht Zurücksetzen",
+    deviceList: "Geräteliste",
+    selectVulnerability: "Schwachstelle auswählen",
+    linkDevices: "Geräte verbinden",
+    cancelLinking: "Verknüpfung abbrechen",
+    viewDetails: "Details anzeigen",
+    showMap: "Karte anzeigen",
+    "networkMap.iconsSize": "Icon-Größe",
+    "networkMap.currentZoom": "Aktueller Zoom",
+    "networkMap.openPorts": "Offene Ports",
+    "networkMap.cableConnections": "Kabelverbindungen",
+    
+    // Common
+    save: "Speichern",
+    cancel: "Abbrechen",
+    delete: "Löschen",
+    confirm: "Bestätigen",
+    loading: "Laden",
+    error: "Fehler",
+    success: "Erfolg",
+    close: "Schließen",
+    back: "Zurück",
+    next: "Weiter",
+    previous: "Vorherige",
+    search: "Suchen",
+    noteAnalysisFailed: "Hinweis: Die automatische Dateianalyse ist fehlgeschlagen.",
+    user: "Benutzer",
+    securityAdmin: "Sicherheitsadministrator",
+    unknown: "Unbekannt",
+    na: "N/A",
+    page: "Seite",
+    translatingReport: "Bericht wird übersetzt",
+    pleaseWait: "Bitte warten...",
+  }
+};
+
+// Helper function to get nested translation keys
+export const getNestedTranslation = (obj, path) => {
+  if (!path) return undefined;
+  return path.split('.').reduce((current, key) => current?.[key], obj);
+};
+
+// Cache in memoria per traduzioni AI
+const aiCache = new Map();
+
+// Enhanced rate limiting with longer cooldowns
+let aiCooldownUntil = 0;
+let lastLLMCall = 0;
+const MIN_INTERVAL_MS = 800; // Increased from 450ms
+const COOLDOWN_ON_ERROR_MS = 30000; // 30 second cooldown on rate limit
+const COOLDOWN_ON_QUOTA_MS = 60 * 60 * 1000; // 1 hour cooldown when monthly quota/limit is reached
+const pendingTranslations = new Map();
+
+const simpleHash = (str) => {
+  let hash = 5381;
+  for (let i = 0; i < (str || "").length; i++) {
+    hash = ((hash << 5) + hash) + str.charCodeAt(i);
+  }
+  return (hash >>> 0).toString(36);
+};
+
+// Sanitize LLM output (remove wrapping quotes/backticks/triple quotes)
+const sanitizeLLMOutput = (text) => {
+  if (!text || typeof text !== "string") return text;
+  let s = text.trim();
+
+  // Remove wrapping triple quotes """..."""
+  if (s.startsWith('"""') && s.endsWith('"""')) {
+    s = s.slice(3, -3).trim();
+  }
+  // Remove wrapping markdown fences ```...```
+  if (s.startsWith("```") && s.endsWith("```")) {
+    const firstLineBreak = s.indexOf("\n");
+    if (firstLineBreak !== -1) {
+      s = s.slice(firstLineBreak + 1, -3).trim();
+    } else {
+      s = s.replace(/^```[a-zA-Z-]*\s*|```$/g, "").trim();
+    }
+  }
+  // Remove simple wrapping quotes "..." or '...'
+  if ((s.startsWith('"') && s.endsWith('"')) || (s.startsWith("'") && s.endsWith("'"))) {
+    s = s.slice(1, -1).trim();
+  }
+  return s;
+};
+
+async function applyRateLimit() {
+  const now = Date.now();
+  if (now < aiCooldownUntil) {
+    // In cooldown: throw error to stop translation attempts
+    throw new Error("AI translation in cooldown, please wait");
+  }
+  const elapsed = now - lastLLMCall;
+  if (elapsed < MIN_INTERVAL_MS) {
+    await new Promise((r) => setTimeout(r, MIN_INTERVAL_MS - elapsed));
+  }
+  lastLLMCall = Date.now();
+  return true;
+}
+
+// Traduzione AI con cache locale + entity + throttling + de-dup
+export async function translateWithAI(text, targetLang, scope = "global") {
+  if (!text || typeof text !== "string") return text;
+  if (!targetLang || targetLang === "it") return text; // Italiano come base di default
+  if (text.trim().length <= 1) return text;
+
+  const key = `${simpleHash(text)}|${targetLang}|${scope}`;
+  if (aiCache.has(key)) {
+    return aiCache.get(key);
+  }
+
+  // De-duplicate concurrent calls for the same key
+  if (pendingTranslations.has(key)) {
+    try {
+      return await pendingTranslations.get(key);
+    } catch {
+      return text;
+    }
+  }
+
+  const doTranslate = (async () => {
+    // Try DB cache first
+    try {
+      // Assuming base44.entities.Translation and base44.integrations.Core exist in the environment
+      // and are correctly configured to interact with a backend or API.
+      // If `base44` is not defined in the scope where this function runs,
+      // this part will throw a ReferenceError.
+      const existing = await base44.entities.Translation.filter({ key });
+      if (existing && existing.length > 0) {
+        const translated = sanitizeLLMOutput(existing[0].translated_text);
+        aiCache.set(key, translated);
+        return translated;
+      }
+    } catch (dbError) {
+      // Log DB error but don't prevent translation attempt
+      console.warn("DB cache lookup failed:", dbError.message);
+    }
+
+    // Rate limit check
+    try {
+      await applyRateLimit();
+    } catch (e) {
+      // In cooldown, return original text
+      aiCache.set(key, text);
+      return text;
+    }
+
+    const prompt = `You are a translation engine. Translate the following text to language code "${targetLang}".
+- Detect source language automatically
+- Preserve formatting, line breaks, punctuation
+- Return ONLY the translated text without quotes or wrapping
+- Do not add notes or explanations
+
+TEXT:
+${text}`;
+
+    try {
+      const res = await base44.integrations.Core.InvokeLLM({
+        prompt,
+        response_json_schema: {
+          type: "object",
+          properties: { translated_text: { type: "string" } },
+          required: ["translated_text"]
+        }
+      });
+
+      const translatedRaw = res?.translated_text || text;
+      const translated = sanitizeLLMOutput(translatedRaw);
+      aiCache.set(key, translated);
+
+      // Best-effort save to DB
+      try {
+        await base44.entities.Translation.create({
+          key,
+          source_text: text,
+          target_lang: targetLang,
+          translated_text: translated,
+          scope,
+          last_used_date: new Date().toISOString()
+        });
+      } catch (persistenceError) {
+        // Use warn, do not escalate to app error
+        console.warn("Translation persistence failed:", persistenceError?.message || persistenceError);
+      }
+
+      return translated;
+    } catch (e) {
+      const message = (e && (e.message || e.toString())) || "";
+
+      // Treat quota/plan limits as long cooldown to avoid repeated failures
+      const isRateLimit = message.toLowerCase().includes("rate limit") || message.includes("429");
+      const isQuotaLimit = message.toLowerCase().includes("limit of integrations") || message.toLowerCase().includes("upgrade your plan") || message.toLowerCase().includes("quota");
+
+      if (isRateLimit) {
+        aiCooldownUntil = Date.now() + COOLDOWN_ON_ERROR_MS;
+        console.warn("AI rate limit hit. Short cooldown initiated.");
+      } else if (isQuotaLimit) {
+        aiCooldownUntil = Date.now() + COOLDOWN_ON_QUOTA_MS;
+        console.warn("AI quota/plan limit hit. Extended cooldown initiated.");
+      } else {
+        // Downgrade to warn to avoid surfacing as app error
+        console.warn("AI translation failed for text (fallback to original):", text, message);
+      }
+
+      // Fallback to original text
+      aiCache.set(key, text);
+      return text;
+    }
+  })();
+
+  pendingTranslations.set(key, doTranslate);
+  try {
+    const result = await doTranslate;
+    return result;
+  } finally {
+    pendingTranslations.delete(key);
+  }
+}
+
+   
