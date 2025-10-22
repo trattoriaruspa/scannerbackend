@@ -1,0 +1,62 @@
+
+import { createClientFromRequest } from 'npm:@base44/sdk@0.7.1';
+import Stripe from 'npm:stripe@^14';
+
+const apiKey = Deno.env.get("STRIPE_API_KEY");
+const stripe = apiKey ? new Stripe(apiKey) : null;
+
+Deno.serve(async (req) => {
+    if (!stripe || !apiKey) {
+        console.error("Stripe API key is not configured.");
+        return new Response(JSON.stringify({ error: 'Stripe API key not configured on the server.' }), { status: 500, headers: { 'Content-Type': 'application/json' } });
+    }
+    const priceId = Deno.env.get('STRIPE_PRICE_ID');
+    if (!priceId) {
+        console.error("Stripe Price ID is not configured.");
+        return new Response(JSON.stringify({ error: 'Stripe Price ID not configured on the server.' }), { status: 500, headers: { 'Content-Type': 'application/json' } });
+    }
+
+    try {
+        const base44 = createClientFromRequest(req);
+        const user = await base44.auth.me();
+        
+        if (!user) {
+            return new Response(JSON.stringify({ error: 'Unauthorized' }), { status: 401, headers: { 'Content-Type': 'application/json' } });
+        }
+
+        const { success_url, cancel_url } = await req.json();
+
+        // OPTIMIZED FLOW:
+        // We no longer pre-create the customer. We pass the email to Stripe Checkout,
+        // and Stripe will create the customer for us. We'll get the customer ID
+        // from the webhook after a successful checkout.
+        
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types: ['card'],
+            mode: 'subscription',
+            // Instead of a customer ID, we provide the email and a reference to our user ID
+            customer_email: user.email,
+            client_reference_id: user.id,
+            allow_promotion_codes: true,
+            line_items: [{
+                price: priceId,
+                quantity: 1,
+            }],
+            success_url: success_url,
+            cancel_url: cancel_url,
+            // Stripe will handle the trial period
+            subscription_data: {
+              trial_period_days: 7, // Always offer 7 days for new subscriptions via this flow
+            }
+        });
+
+        return new Response(JSON.stringify({ sessionId: session.id, url: session.url }), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+        });
+
+    } catch (error) {
+        console.error('Error creating checkout session:', error.message);
+        return new Response(JSON.stringify({ error: error.message }), { status: 500, headers: { 'Content-Type': 'application/json' } });
+    }
+});
