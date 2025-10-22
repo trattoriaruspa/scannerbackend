@@ -1,3 +1,7 @@
+import { createClientFromRequest } from 'npm:@base44/sdk@0.7.1';
+import { jsPDF } from 'npm:jspdf@2.5.1';
+import autoTable from 'npm:jspdf-autotable@3.8.2';
+
 const translations = {
   it: {
     projects: "Progetti",
@@ -1550,3 +1554,190 @@ const translations = {
     noEvidenceFiles: "Keine Nachweisdateien.",
   }
 };
+
+
+function getNestedTranslation(obj, path) {
+  if (!path) return undefined;
+  return path.split('.').reduce((current, key) => current?.[key], obj);
+}
+
+// Backend 't' function
+function getTranslator(lang) {
+  const safeLang = translations[lang] ? lang : 'it'; // Fallback to Italian
+  return (key) => {
+    let translation = getNestedTranslation(translations[safeLang], key);
+    if (!translation && safeLang !== 'it') {
+      translation = getNestedTranslation(translations.it, key);
+    }
+    return translation || key;
+  };
+}
+
+Deno.serve(async (req) => {
+    
+    function addSection(doc, y, title, content, isHtml = false) {
+        const pageHeight = doc.internal.pageSize.height;
+        let newY = y;
+
+        if (newY > pageHeight - 40) { // Increased bottom margin
+            doc.addPage();
+            newY = 20;
+        }
+        doc.setFontSize(14);
+        doc.setFont('helvetica', 'bold');
+        doc.text(title.toUpperCase(), 14, newY);
+        newY += 8;
+
+        doc.setFontSize(11);
+        doc.setFont('helvetica', 'normal');
+        if (isHtml) {
+             doc.html(content, { x: 14, y: newY, width: 180, windowWidth: 800 });
+             newY = doc.previousAutoTable.finalY + 10;
+        } else {
+             const splitContent = doc.splitTextToSize(content || getTranslator('it')('completeByAuditor'), 180);
+             doc.text(splitContent, 14, newY);
+             newY += (splitContent.length * 5) + 10;
+        }
+        newY += 5; // spacing after section
+        return newY;
+    }
+
+    try {
+        const base44 = createClientFromRequest(req);
+        const user = await base44.auth.me();
+        if (!user) {
+            return new Response(JSON.stringify({ error: 'Unauthorized' }), { status: 401, headers: { 'Content-Type': 'application/json' } });
+        }
+
+        const { reportId, lang } = await req.json();
+        if (!reportId) {
+            return new Response(JSON.stringify({ error: 'reportId is required' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
+        }
+        
+        const t = getTranslator(lang || 'it');
+        
+        const localeMap = {
+            it: 'it-IT',
+            en: 'en-US',
+            es: 'es-ES',
+            fr: 'fr-FR',
+            de: 'de-DE'
+        };
+        const safeLocale = localeMap[lang] || 'it-IT';
+
+        const reports = await base44.entities.Report.filter({ id: reportId });
+        if (!reports || reports.length === 0) {
+            return new Response(JSON.stringify({ error: 'Report not found' }), { status: 404, headers: { 'Content-Type': 'application/json' } });
+        }
+        const report = reports[0];
+
+        const doc = new jsPDF();
+        const pageHeight = doc.internal.pageSize.height;
+        let y = 20;
+
+        // --- HEADER ---
+        doc.setFontSize(22);
+        doc.setFont('helvetica', 'bold');
+        doc.text(t('professionalSecurityReport'), 14, y);
+        y += 10;
+        doc.setFontSize(12);
+        doc.text(`${t('reportDate')}: ${new Date().toLocaleDateString(safeLocale)}`, 14, y);
+        y += 7;
+        doc.text(`${t('projectName')}: ${report.report_name}`, 14, y);
+        y += 15;
+
+
+        // --- DYNAMIC SECTIONS RENDERING ---
+        const sectionRenderers = {
+            header: () => { /* Handled above */ },
+            executive_summary: () => { y = addSection(doc, y, t('executiveSummary'), report.executive_summary); },
+            test_type_methodology: () => { y = addSection(doc, y, t('testTypeMethodology'), report.test_type_methodology); },
+            findings_summary: () => {
+                const head = [[t('vulnerabilityId'), t('title'), t('severity')]];
+                const body = (report.vulnerabilities_details || []).map((v, i) => [`V-${i+1}`, v.title, t(v.severity)]);
+                y = addSection(doc, y, t('findingsSummary'), '');
+                doc.autoTable({ startY: y - 10, head, body });
+                y = doc.previousAutoTable.finalY + 15;
+            },
+            vulnerability_details: () => {
+              (report.vulnerabilities_details || []).forEach((vuln, index) => {
+                  const vulnTitle = `V-${index + 1}: ${vuln.title}`;
+                  let content = `**${t('severity')}:** ${t(vuln.severity)}\n`;
+                  content += `**${t('description')}:** ${vuln.description_simple}\n`;
+                  content += `**${t('recommendedAction')}:** ${vuln.remediation}\n`;
+                  content += `**${t('affectedAssets')}:** ${(vuln.affected_assets || []).join(', ')}`;
+                  y = addSection(doc, y, vulnTitle, content);
+              });
+            },
+            scanned_devices: () => {
+                const head = [[t('hostname'), t('ipAddress'), t('type'), t('operatingSystem'), t('riskLevel')]];
+                const body = (report.devices_details || []).map(d => [d.hostname, d.ip_address, d.device_type, d.operating_system || 'N/A', t(d.risk_level)]);
+                y = addSection(doc, y, t('scannedAssets'), '');
+                doc.autoTable({ startY: y - 10, head, body });
+                y = doc.previousAutoTable.finalY + 15;
+            },
+            remediation_plan: () => {
+                const content = `**${t('remediationPlan30d')}:**\n${report.remediation_plan_30d}\n\n` +
+                                `**${t('remediationPlan60d')}:**\n${report.remediation_plan_60d}\n\n` +
+                                `**${t('remediationPlan90d')}:**\n${report.remediation_plan_90d}`;
+                y = addSection(doc, y, t('remediationPlan'), content);
+            },
+            retest_request: () => { y = addSection(doc, y, t('retestRequest'), report.retest_request); },
+            evidence_summary: () => {
+                const fileList = (report.evidence_files || []).map(url => `- ${decodeURIComponent(url.split('/').pop())}`).join('\n');
+                y = addSection(doc, y, t('evidenceSummary'), fileList || t('noEvidenceFiles'));
+            }
+        };
+
+        const defaultSectionOrder = [
+            'header', 'executive_summary', 'test_type_methodology', 'findings_summary',
+            'vulnerability_details', 'scanned_devices', 'remediation_plan', 'retest_request', 'evidence_summary'
+        ];
+
+        const sectionOrder = report.section_order || defaultSectionOrder;
+        
+        const hiddenSections = report.hidden_sections || [];
+
+        for (const sectionKey of sectionOrder) {
+            if (hiddenSections.includes(sectionKey)) continue;
+
+            const renderer = sectionRenderers[sectionKey];
+            if (renderer) {
+                renderer();
+            } else if (sectionKey.startsWith('custom_')) {
+                const customSection = (report.custom_sections || []).find(s => s.id === sectionKey);
+                if (customSection) {
+                    y = addSection(doc, y, customSection.title, customSection.content);
+                }
+            }
+        }
+
+
+        // --- FOOTER on each page ---
+        const pageCount = doc.internal.getNumberOfPages();
+        for(let i = 1; i <= pageCount; i++) {
+            doc.setPage(i);
+            doc.setFontSize(9);
+            doc.text(`${t('confidentialDocument')} | ${t('securityPlatform')}`, 14, pageHeight - 10);
+            doc.text(`${t('page')} ${i} / ${pageCount}`, doc.internal.pageSize.width - 40, pageHeight - 10);
+        }
+
+        const pdfBytes = doc.output('arraybuffer');
+        
+        const sanitizedReportName = report.report_name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+        const formattedDate = new Date().toISOString().split('T')[0];
+        const filename = `Report_${sanitizedReportName}_${formattedDate}.pdf`;
+
+        return new Response(pdfBytes, {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/pdf',
+                'Content-Disposition': `attachment; filename="${filename}"`
+            }
+        });
+
+    } catch (error) {
+        console.error('Error generating report:', error);
+        return new Response(JSON.stringify({ error: 'Internal server error', details: error.message }), { status: 500, headers: { 'Content-Type': 'application/json' } });
+    }
+});
